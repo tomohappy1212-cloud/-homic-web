@@ -1,1 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  color: #111;
+  background: #fff;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 6%;
+
+  background: rgba(255,255,255,.9);
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid #eee;
+
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+  color: #777;
+}
+
+.header nav {
+  display: flex;
+  gap: 28px;
+}
+
+.header nav a {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 140px 7% 100px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      #eeeeee,
+      transparent 30%
+    ),
+    #fff;
+}
+
+.hero-inner {
+  max-width: 850px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  color: #666;
+}
+
+.hero-text {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.hero-price {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.hero-price small {
+  font-weight: 700;
+}
+
+.hero-price strong {
+  font-size: 42px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  padding: 16px 25px;
+
+  background: #111;
+  color: #fff;
+
+  border-radius: 100px;
+
+  font-weight: 800;
+  transition: .25s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  opacity: .8;
+}
+
+.button span {
+  font-size: 20px;
+}
+
+.section {
+  padding: 120px 7%;
+}
+
+.section-title {
+  margin-bottom: 55px;
+}
+
+.section-title p {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #777;
+}
+
+.section-title h2 {
+  font-size: clamp(34px, 5vw, 55px);
+  letter-spacing: -2px;
+  line-height: 1.2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 35px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.card span {
+  font-size: 13px;
+  color: #999;
+}
+
+.card h3 {
+  margin: 25px 0 15px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #666;
+}
+
+.works-section {
+  background: #f6f6f6;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.work {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.work-image {
+  height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ddd;
+
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.work-info {
+  padding: 25px;
+}
+
+.work-info small {
+  color: #888;
+}
+
+.work-info h3 {
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.sample-note {
+  color: #888;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.price-card {
+  border: 1px solid #ddd;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.price-card.featured {
+  background: #111;
+  color: #fff;
+  transform: translateY(-10px);
+}
+
+.plan {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+
+.price-card h3 {
+  margin: 20px 0;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.price strong {
+  font-size: 42px;
+}
+
+.price-card ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.price-card li {
+  padding: 9px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.price-card.featured li {
+  border-color: #444;
+}
+
+.button.dark {
+  background: #fff;
+  color: #111;
+}
+
+.button.outline {
+  background: transparent;
+  color: #111;
+  border: 1px solid #111;
+}
+
+.process-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.process-list > div {
+  padding: 25px;
+  border-top: 2px solid #111;
+}
+
+.process-list span {
+  font-size: 12px;
+  color: #888;
+}
+
+.process-list h3 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+}
+
+.process-list p {
+  color: #666;
+  font-size: 13px;
+}
+
+.faq {
+  background: #f6f6f6;
+}
+
+.faq-list {
+  max-width: 850px;
+}
+
+details {
+  border-top: 1px solid #ccc;
+  padding: 25px 0;
+}
+
+details:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 800;
+}
+
+details p {
+  color: #666;
+  margin-top: 15px;
+}
+
+.contact {
+  padding: 140px 7%;
+  background: #111;
+  color: #fff;
+}
+
+.contact-inner {
+  max-width: 750px;
+}
+
+.contact h2 {
+  font-size: clamp(42px, 7vw, 75px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  margin-bottom: 25px;
+}
+
+.contact p {
+  color: #aaa;
+  margin-bottom: 35px;
+}
+
+.button.white {
+  background: #fff;
+  color: #111;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 50px 7%;
+  border-top: 1px solid #333;
+}
+
+.footer-logo {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+footer p {
+  color: #888;
+  margin: 10px 0 30px;
+}
+
+footer small {
+  color: #666;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    height: 60px;
+    padding: 0 5%;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 120px 6% 80px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .hero-price strong {
+    font-size: 34px;
+  }
+
+  .section {
+    padding: 85px 6%;
+  }
+
+  .cards,
+  .price-grid,
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card.featured {
+    transform: none;
+  }
+
+  .process-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 90px 6%;
+  }
+
+  .contact h2 {
+    font-size: 45px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+}
