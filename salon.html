@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HOMIC SALON</title>
+
+<meta name="description"
+content="HOMICが提案する美容・サロン向けホームページのサンプルです。">
+
+<style>
+
+/* =====================================================
+   HOMIC SALON TEMPLATE
+   1ファイル完結型
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  color: #222;
+  background: #f7f5f2;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+:root {
+  --brown: #7f3028;
+  --brown-dark: #5f241f;
+
+  --navy: #101a35;
+
+  --cream: #f7f5f2;
+  --cream-dark: #ebe7e1;
+
+  --white: #ffffff;
+
+  --gray: #777;
+  --line: #ddd8d1;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: rgba(255,255,255,.94);
+
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid rgba(0,0,0,.06);
+
+  z-index: 1000;
+}
+
+.logo {
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--brown);
+}
+
+.nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 27px;
+}
+
+.nav a {
+  font-size: 11px;
+
+  font-weight: 800;
+
+  transition: .25s;
+}
+
+.nav a:hover {
+  color: var(--brown);
+}
+
+.nav-reserve {
+  color: #fff !important;
+
+  background: var(--brown);
+
+  padding: 10px 19px;
+
+  border-radius: 100px;
+}
+
+.nav-reserve:hover {
+  background: var(--brown-dark);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 45% 55%;
+
+  padding-top: 74px;
+
+  background: var(--cream);
+}
+
+.hero-content {
+  display: flex;
+
+  align-items: center;
+
+  padding: 70px 8%;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.hero-small {
+  color: var(--brown);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(48px, 6vw, 80px);
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--brown);
+}
+
+.hero-description {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  max-width: 450px;
+
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding: 13px 25px;
+
+  border-radius: 100px;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  transition: .25s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-main {
+  color: #fff;
+
+  background: var(--brown);
+
+  box-shadow:
+    0 12px 30px
+    rgba(95,36,31,.2);
+}
+
+.button-main:hover {
+  background: var(--brown-dark);
+}
+
+.button-outline {
+  border: 1px solid #ccc5bd;
+
+  color: #222;
+}
+
+.button-outline:hover {
+  color: #fff;
+
+  background: #222;
+
+  border-color: #222;
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d6c5b7,
+      #60473e
+    );
+}
+
+.hero-visual::before {
+  content: "HOMIC";
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    rgba(255,255,255,.28);
+
+  font-family: Georgia, serif;
+
+  font-size: 70px;
+
+  letter-spacing: 8px;
+}
+
+.hero-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70%;
+
+  height: 70%;
+
+  right: -15%;
+
+  bottom: -15%;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,.4);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+  padding:
+    100px 7%;
+
+  color: #fff;
+
+  background: var(--navy);
+
+  text-align: center;
+}
+
+.intro-inner {
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.label {
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  font-weight: 900;
+
+  color: var(--brown);
+
+  margin-bottom: 15px;
+}
+
+.intro .label {
+  color: #b9796f;
+}
+
+.intro h2 {
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(38px, 5vw, 65px);
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.intro p {
+  color: #c8cedc;
+
+  font-size: 14px;
+
+  max-width: 650px;
+
+  margin: auto;
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.section {
+  padding:
+    110px 7%;
+}
+
+.section-title {
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(40px, 5vw, 68px);
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 50px;
+}
+
+
+/* =====================================================
+   CONCEPT
+===================================================== */
+
+.concept {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.concept-image {
+  min-height: 520px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eee5dc,
+      #80665b
+    );
+
+  border-radius:
+    0 150px 0 0;
+}
+
+.concept-image::before {
+  content: "STYLE";
+
+  position: absolute;
+
+  left: 35px;
+
+  bottom: 35px;
+
+  color:
+    rgba(255,255,255,.75);
+
+  font-family: Georgia, serif;
+
+  font-size: 35px;
+
+  letter-spacing: 5px;
+}
+
+.concept-text h3 {
+  font-family: Georgia, serif;
+
+  font-size: 34px;
+
+  line-height: 1.3;
+
+  margin-bottom: 23px;
+}
+
+.concept-text p {
+  color: var(--gray);
+
+  font-size: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu-section {
+  background: var(--cream-dark);
+}
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.menu-card {
+  padding: 32px 28px;
+
+  background: #fff;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 20px;
+
+  transition: .25s;
+}
+
+.menu-card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 20px 45px
+    rgba(0,0,0,.08);
+}
+
+.menu-label {
+  color: var(--brown);
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  font-weight: 900;
+
+  margin-bottom: 6px;
+}
+
+.menu-card h3 {
+  font-family: Georgia, serif;
+
+  font-size: 28px;
+
+  margin-bottom: 22px;
+}
+
+.menu-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 13px 0;
+
+  border-bottom:
+    1px solid #eee;
+
+  font-size: 13px;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item span {
+  color: var(--brown);
+
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   STAFF
+===================================================== */
+
+.staff-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.staff-card {
+  background: #fff;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: .25s;
+}
+
+.staff-card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 20px 45px
+    rgba(0,0,0,.08);
+}
+
+.staff-photo {
+  height: 300px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d8c7ba,
+      #73584d
+    );
+
+  color:
+    rgba(255,255,255,.65);
+
+  font-family: Georgia, serif;
+
+  font-size: 27px;
+
+  letter-spacing: 3px;
+}
+
+.staff-info {
+  padding: 22px;
+}
+
+.staff-role {
+  color: var(--brown);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  font-weight: 900;
+}
+
+.staff-info h3 {
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+
+  margin: 3px 0 8px;
+}
+
+.staff-info p {
+  color: var(--gray);
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   RESERVATION BANNER
+===================================================== */
+
+.reserve-banner {
+  padding:
+    100px 7%;
+
+  color: #fff;
+
+  background:
+    var(--brown);
+
+  text-align: center;
+}
+
+.reserve-banner h2 {
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(42px, 6vw, 70px);
+
+  line-height: 1.05;
+
+  margin-bottom: 22px;
+}
+
+.reserve-banner p {
+  color:
+    rgba(255,255,255,.8);
+
+  font-size: 14px;
+
+  margin-bottom: 28px;
+}
+
+.reserve-white {
+  color: var(--brown);
+
+  background: #fff;
+}
+
+.reserve-white:hover {
+  background: var(--navy);
+
+  color: #fff;
+}
+
+
+/* =====================================================
+   ACCESS
+===================================================== */
+
+.access-section {
+  background: var(--cream);
+}
+
+.access {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 25px;
+}
+
+.access-info {
+  padding: 38px;
+
+  background: #fff;
+
+  border:
+    1px solid var(--line);
+
+  border-radius: 20px;
+}
+
+.access-info h3 {
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+
+  margin-bottom: 25px;
+}
+
+.access-info p {
+  color: var(--gray);
+
+  font-size: 13px;
+
+  margin-bottom: 17px;
+}
+
+.access-info strong {
+  color: var(--brown);
+}
+
+.map {
+  min-height: 350px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    #e5e0d8;
+
+  color: var(--brown);
+
+  border-radius: 20px;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  padding:
+    45px 7%;
+
+  color: #fff;
+
+  background:
+    #080f24;
+
+  border-top:
+    5px solid var(--brown);
+}
+
+.footer-inner {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-logo {
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  letter-spacing: 2px;
+}
+
+.footer-logo span {
+  color: var(--brown);
+}
+
+.footer-description {
+  color: #8792a8;
+
+  font-size: 11px;
+
+  margin-top: 6px;
+}
+
+.footer-copy {
+  color: #66718a;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .header {
+    height: 62px;
+
+    padding: 0 5%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    display: block;
+
+    padding-top: 62px;
+  }
+
+  .hero-content {
+    padding:
+      75px 6%
+      60px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero-visual {
+    height: 430px;
+  }
+
+  .section {
+    padding:
+      75px 6%;
+  }
+
+  .concept {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .concept-image {
+    min-height: 350px;
+
+    border-radius:
+      0 100px 0 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .staff-photo {
+    height: 330px;
+  }
+
+  .access {
+    grid-template-columns: 1fr;
+  }
+
+  .map {
+    min-height: 260px;
+  }
+
+  .footer-inner {
+    display: block;
+  }
+
+  .footer-copy {
+    display: block;
+
+    margin-top: 25px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+  <a href="#" class="logo">
+    HOM<span>IC</span>
+  </a>
+
+  <nav class="nav">
+
+    <a href="#concept">
+      CONCEPT
+    </a>
+
+    <a href="#menu">
+      MENU
+    </a>
+
+    <a href="#staff">
+      STAFF
+    </a>
+
+    <a href="#access">
+      ACCESS
+    </a>
+
+    <a
+      href="#reservation"
+      class="nav-reserve"
+    >
+      予約する
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div>
+
+      <div class="hero-small">
+        HOMIC SALON
+      </div>
+
+      <h1>
+        あなたらしさを、<br>
+        <span>もっと美しく。</span>
+      </h1>
+
+      <p class="hero-description">
+
+        一人ひとりの魅力に寄り添い、
+        毎日が少し楽しくなる
+        ヘアスタイルをご提案します。
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#menu"
+          class="button button-main"
+        >
+          MENUを見る
+        </a>
+
+        <a
+          href="#reservation"
+          class="button button-outline"
+        >
+          予約する
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-visual"></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+  <div class="intro-inner">
+
+    <div class="label">
+      OUR CONCEPT
+    </div>
+
+    <h2>
+      髪を整えるだけじゃない。<br>
+      自分を好きになる時間。
+    </h2>
+
+    <p>
+
+      HOMICでは、
+      技術だけではなく、
+      カウンセリングから仕上げまで
+      一人ひとりに向き合うことを
+      大切にしています。
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONCEPT
+===================================================== -->
+
+<section
+  class="section"
+  id="concept"
+>
+
+  <div class="label">
+    CONCEPT
+  </div>
+
+  <h2 class="section-title">
+    こだわり
+  </h2>
+
+
+  <div class="concept">
+
+    <div class="concept-image"></div>
+
+    <div class="concept-text">
+
+      <h3>
+        似合うだけじゃない。<br>
+        「なりたい」を形に。
+      </h3>
+
+      <p>
+
+        髪質、骨格、ライフスタイル。
+        それぞれ違うからこそ、
+        同じスタイルはありません。
+
+      </p>
+
+      <p>
+
+        丁寧なカウンセリングを通して、
+        お客様自身も気づいていなかった
+        魅力を引き出します。
+
+      </p>
+
+      <p>
+
+        サロンを出たあとも、
+        自宅で簡単に再現できる
+        スタイルをご提案します。
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<section
+  class="section menu-section"
+  id="menu"
+>
+
+  <div class="label">
+    MENU
+  </div>
+
+  <h2 class="section-title">
+    メニュー
+  </h2>
+
+
+  <div class="menu-grid">
+
+
+    <div class="menu-card">
+
+      <div class="menu-label">
+        CUT
+      </div>
+
+      <h3>
+        Cut
+      </h3>
+
+      <div class="menu-item">
+        <strong>
+          カット
+        </strong>
+
+        <span>
+          ¥5,500
+        </span>
+      </div>
+
+      <div class="menu-item">
+        <strong>
+          学生カット
+        </strong>
+
+        <span>
+          ¥4,000
+        </span>
+      </div>
+
+      <div class="menu-item">
+        <strong>
+          前髪カット
+        </strong>
+
+        <span>
+          ¥1,100
+        </span>
+      </div>
+
+    </div>
+
+
+
+    <div class="menu-card">
+
+      <div class="menu-label">
+        COLOR
+      </div>
+
+      <h3>
+        Color
+      </h3>
+
+      <div class="menu-item">
+        <strong>
+          カラー
+        </strong>
+
+        <span>
+          ¥6,600〜
+        </span>
+      </div>
+
+      <div class="menu-item">
+        <strong>
+          リタッチ
+        </strong>
+
+        <span>
+          ¥5,500
+        </span>
+      </div>
+
+      <div class="menu-item">
+        <strong>
+          ハイライト
+        </strong>
+
+        <span>
+          ¥8,800〜
+        </span>
+      </div>
+
+    </div>
+
+
+
+    <div class="menu-card">
+
+      <div class="menu-label">
+        TREATMENT
+      </div>
+
+      <h3>
+        Care
+      </h3>
+
+      <div class="menu-item">
+        <strong>
+          トリートメント
+        </strong>
+
+        <span>
+          ¥3,300〜
+        </span>
+      </div>
+
+      <div class="menu-item">
+        <strong>
+          ヘッドスパ
+        </strong>
+
+        <span>
+          ¥4,400
+        </span>
+      </div>
+
+      <div class="menu-item">
+        <strong>
+          プレミアムケア
+        </strong>
+
+        <span>
+          ¥6,600
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STAFF
+===================================================== -->
+
+<section
+  class="section"
+  id="staff"
+>
+
+  <div class="label">
+    STAFF
+  </div>
+
+  <h2 class="section-title">
+    スタッフ
+  </h2>
+
+
+  <div class="staff-grid">
+
+
+    <div class="staff-card">
+
+      <div class="staff-photo">
+        HOMIC
+      </div>
+
+      <div class="staff-info">
+
+        <div class="staff-role">
+          OWNER / STYLIST
+        </div>
+
+        <h3>
+          HANA
+        </h3>
+
+        <p>
+          ナチュラルで扱いやすい
+          スタイルが得意です。
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="staff-card">
+
+      <div class="staff-photo">
+        HOMIC
+      </div>
+
+      <div class="staff-info">
+
+        <div class="staff-role">
+          STYLIST
+        </div>
+
+        <h3>
+          RINA
+        </h3>
+
+        <p>
+          カラーや透明感のある
+          スタイルを得意としています。
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="staff-card">
+
+      <div class="staff-photo">
+        HOMIC
+      </div>
+
+      <div class="staff-info">
+
+        <div class="staff-role">
+          STYLIST
+        </div>
+
+        <h3>
+          YUKI
+        </h3>
+
+        <p>
+          メンズスタイルや
+          ショートヘアが得意です。
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESERVATION
+===================================================== -->
+
+<section
+  class="reserve-banner"
+  id="reservation"
+>
+
+  <div class="label">
+    RESERVATION
+  </div>
+
+  <h2>
+    あなたの「なりたい」を<br>
+    お聞かせください。
+  </h2>
+
+  <p>
+    ご予約・お問い合わせはこちらから。
+  </p>
+
+  <!-- ★ 実案件では予約URLに変更 -->
+
+  <a
+    href="#"
+    class="button reserve-white"
+    onclick="
+      alert('予約ページへ移動します。');
+      return false;
+    "
+  >
+    予約する
+  </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACCESS
+===================================================== -->
+
+<section
+  class="section access-section"
+  id="access"
+>
+
+  <div class="label">
+    ACCESS
+  </div>
+
+  <h2 class="section-title">
+    店舗情報
+  </h2>
+
+
+  <div class="access">
+
+
+    <div class="access-info">
+
+      <h3>
+        HOMIC SALON
+      </h3>
+
+      <p>
+
+        <strong>
+          ADDRESS
+        </strong><br>
+
+        愛媛県〇〇市〇〇町1-2-3
+
+      </p>
+
+      <p>
+
+        <strong>
+          OPEN
+        </strong><br>
+
+        10:00 - 19:00
+
+      </p>
+
+      <p>
+
+        <strong>
+          CLOSED
+        </strong><br>
+
+        火曜日
+
+      </p>
+
+      <p>
+
+        <strong>
+          TEL
+        </strong><br>
+
+        000-0000-0000
+
+      </p>
+
+    </div>
+
+
+    <div class="map">
+      MAP
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">
+        HOM<span>IC</span>
+      </div>
+
+      <div class="footer-description">
+        あなたらしさを、もっと美しく。
+      </div>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 HOMIC. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   HOMIC SALON
+   Simple Scroll Animation
+===================================================== */
+
+const observer =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.style.opacity = "1";
+
+          entry.target.style.transform =
+            "translateY(0)";
+
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.12
+    }
+  );
+
+
+document
+  .querySelectorAll(
+    ".concept-text, .menu-card, .staff-card, .access-info"
+  )
+  .forEach((element) => {
+
+    element.style.opacity = "0";
+
+    element.style.transform =
+      "translateY(25px)";
+
+    element.style.transition =
+      "opacity .7s ease, transform .7s ease";
+
+    observer.observe(element);
+
+  });
+
+
+/* HEADER SHADOW */
+
+window.addEventListener(
+  "scroll",
+  () => {
+
+    const header =
+      document.querySelector(".header");
+
+    if (window.scrollY > 30) {
+
+      header.style.boxShadow =
+        "0 8px 30px rgba(0,0,0,.08)";
+
+    } else {
+
+      header.style.boxShadow =
+        "none";
+
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>
