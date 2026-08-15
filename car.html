@@ -1,0 +1,2970 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>HOMIC MOTOR WORKS</title>
+
+<meta
+  name="description"
+  content="HOMIC MOTOR WORKS｜車を選ぶ。車を楽しむ。"
+>
+
+<style>
+
+/* =========================================================
+   HOMIC MOTOR WORKS
+   AUTOMOTIVE WEBSITE TEMPLATE
+========================================================= */
+
+:root{
+
+  --black:#08090a;
+  --black2:#101214;
+  --black3:#171a1d;
+
+  --white:#f4f4f1;
+  --gray:#9a9da0;
+  --gray2:#55595d;
+
+  --silver:#c8cacc;
+
+  --accent:#d9a62e;
+  --accent2:#f0c85c;
+
+  --line:rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:var(--black);
+
+  color:var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+  line-height:1.7;
+
+  overflow-x:hidden;
+
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  height:82px;
+
+  padding:
+    0 5%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  z-index:1000;
+
+  background:
+    rgba(8,9,10,.92);
+
+  backdrop-filter:
+    blur(14px);
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+}
+
+
+.logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+
+}
+
+
+.logo-symbol{
+
+  width:38px;
+  height:38px;
+
+  border:
+    2px solid
+    var(--accent);
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-weight:900;
+
+  font-size:15px;
+
+  transform:
+    skew(-10deg);
+
+}
+
+
+.logo-text{
+
+  font-size:18px;
+
+  font-weight:900;
+
+  letter-spacing:3px;
+
+}
+
+
+.logo-text span{
+  color:var(--accent);
+}
+
+
+.nav{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:28px;
+
+}
+
+
+.nav a{
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  color:#bfc1c3;
+
+  transition:.25s;
+
+}
+
+
+.nav a:hover{
+
+  color:var(--accent);
+
+}
+
+
+.nav-cta{
+
+  padding:
+    11px 18px;
+
+  border:
+    1px solid
+    var(--accent);
+
+  color:
+    var(--accent)!important;
+
+}
+
+
+.nav-cta:hover{
+
+  background:
+    var(--accent);
+
+  color:
+    var(--black)!important;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  min-height:100vh;
+
+  padding-top:82px;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      ellipse at 75% 50%,
+      #262a2e 0%,
+      #111315 35%,
+      #08090a 70%
+    );
+
+}
+
+
+/* GRID */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent,
+      black
+    );
+
+}
+
+
+.hero-content{
+
+  width:100%;
+
+  padding:
+    90px 7%;
+
+  position:relative;
+
+  z-index:5;
+
+}
+
+
+.hero-small{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  color:var(--accent);
+
+  font-size:10px;
+
+  font-weight:bold;
+
+  letter-spacing:4px;
+
+  margin-bottom:24px;
+
+}
+
+
+.hero-small::before{
+
+  content:"";
+
+  width:45px;
+  height:2px;
+
+  background:
+    var(--accent);
+
+}
+
+
+.hero h1{
+
+  font-size:
+    clamp(60px,10vw,145px);
+
+  line-height:.88;
+
+  font-weight:1000;
+
+  letter-spacing:
+    -.06em;
+
+  text-transform:uppercase;
+
+  max-width:900px;
+
+}
+
+
+.hero h1 span{
+
+  display:block;
+
+  color:
+    transparent;
+
+  -webkit-text-stroke:
+    2px
+    rgba(244,244,241,.65);
+
+}
+
+
+.hero-copy{
+
+  margin-top:32px;
+
+  max-width:520px;
+
+  color:var(--gray);
+
+  font-size:13px;
+
+}
+
+
+.hero-actions{
+
+  margin-top:36px;
+
+  display:flex;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
+}
+
+
+.button{
+
+  min-height:52px;
+
+  padding:
+    14px 25px;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:10px;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+
+  transition:.3s;
+
+}
+
+
+.button-main{
+
+  background:
+    var(--accent);
+
+  color:
+    var(--black);
+
+}
+
+
+.button-main:hover{
+
+  background:
+    var(--accent2);
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+.button-outline{
+
+  border:
+    1px solid
+    rgba(255,255,255,.3);
+
+}
+
+
+.button-outline:hover{
+
+  border-color:
+    var(--accent);
+
+  color:
+    var(--accent);
+
+}
+
+
+/* =========================================================
+   CAR VISUAL
+========================================================= */
+
+.car-visual{
+
+  position:absolute;
+
+  right:-4%;
+
+  bottom:5%;
+
+  width:
+    min(65vw,900px);
+
+  height:500px;
+
+  z-index:2;
+
+}
+
+
+/* shadow */
+
+.car-shadow{
+
+  position:absolute;
+
+  width:75%;
+
+  height:45px;
+
+  bottom:25px;
+
+  left:15%;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,0,0,.8);
+
+  filter:
+    blur(18px);
+
+}
+
+
+/* body */
+
+.car-body{
+
+  position:absolute;
+
+  left:7%;
+
+  bottom:85px;
+
+  width:82%;
+
+  height:190px;
+
+  background:
+
+    linear-gradient(
+      155deg,
+      #454a4f,
+      #151719 45%,
+      #292d30
+    );
+
+  clip-path:
+
+    polygon(
+      3% 66%,
+      13% 48%,
+      29% 37%,
+      40% 15%,
+      67% 12%,
+      81% 35%,
+      94% 45%,
+      100% 70%,
+      96% 87%,
+      6% 87%
+    );
+
+  box-shadow:
+    0 35px 70px
+    rgba(0,0,0,.8);
+
+}
+
+
+/* roof/window */
+
+.car-window{
+
+  position:absolute;
+
+  left:37%;
+
+  bottom:218px;
+
+  width:32%;
+
+  height:82px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #11181e,
+      #37434b
+    );
+
+  clip-path:
+
+    polygon(
+      0 100%,
+      20% 0,
+      78% 0,
+      100% 100%
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.2);
+
+}
+
+
+.car-window::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+
+  top:0;
+
+  width:1px;
+
+  height:100%;
+
+  background:
+    rgba(255,255,255,.2);
+
+}
+
+
+/* wheels */
+
+.wheel{
+
+  position:absolute;
+
+  bottom:65px;
+
+  width:110px;
+  height:110px;
+
+  border-radius:50%;
+
+  background:
+    #050505;
+
+  border:
+    8px solid
+    #272a2c;
+
+  box-shadow:
+    inset 0 0 0 12px #0a0a0a;
+
+}
+
+
+.wheel::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:22px;
+
+  border-radius:50%;
+
+  border:
+    3px solid
+    var(--silver);
+
+}
+
+
+.wheel.left{
+
+  left:17%;
+
+}
+
+
+.wheel.right{
+
+  right:15%;
+
+}
+
+
+/* headlights */
+
+.headlight{
+
+  position:absolute;
+
+  width:55px;
+  height:15px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #aeb5bb
+    );
+
+  box-shadow:
+    0 0 25px
+    rgba(255,255,255,.7);
+
+  transform:
+    skew(-25deg);
+
+  right:8%;
+
+  bottom:180px;
+
+}
+
+
+.headlight::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:70px;
+  height:2px;
+
+  right:0;
+
+  top:20px;
+
+  background:
+    var(--accent);
+
+  box-shadow:
+    0 0 12px
+    var(--accent);
+
+}
+
+
+/* =========================================================
+   SPEC BAR
+========================================================= */
+
+.spec-bar{
+
+  position:absolute;
+
+  bottom:0;
+  left:0;
+
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  border-top:
+    1px solid
+    var(--line);
+
+  background:
+    rgba(8,9,10,.8);
+
+  z-index:10;
+
+}
+
+
+.spec{
+
+  padding:
+    20px 7%;
+
+  border-right:
+    1px solid
+    var(--line);
+
+}
+
+
+.spec:last-child{
+  border-right:0;
+}
+
+
+.spec-label{
+
+  color:
+    var(--gray2);
+
+  font-size:8px;
+
+  letter-spacing:2px;
+
+}
+
+
+.spec-value{
+
+  margin-top:3px;
+
+  font-size:16px;
+
+  font-weight:bold;
+
+}
+
+
+/* =========================================================
+   MARQUEE
+========================================================= */
+
+.marquee{
+
+  background:
+    var(--accent);
+
+  color:
+    var(--black);
+
+  overflow:hidden;
+
+  white-space:nowrap;
+
+}
+
+
+.marquee-track{
+
+  display:inline-block;
+
+  padding:
+    14px 0;
+
+  animation:
+    marquee 20s linear infinite;
+
+}
+
+
+.marquee span{
+
+  margin:
+    0 35px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:4px;
+
+}
+
+
+@keyframes marquee{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+
+  padding:
+    120px 7%;
+
+  background:
+    var(--black2);
+
+}
+
+
+.section-number{
+
+  color:
+    var(--accent);
+
+  font-size:10px;
+
+  font-weight:bold;
+
+  letter-spacing:4px;
+
+  margin-bottom:20px;
+
+}
+
+
+.about-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:80px;
+
+  align-items:center;
+
+}
+
+
+.about h2{
+
+  font-size:
+    clamp(42px,6vw,82px);
+
+  line-height:1;
+
+  letter-spacing:
+    -.04em;
+
+  margin-bottom:32px;
+
+}
+
+
+.about h2 span{
+
+  color:
+    var(--accent);
+
+}
+
+
+.about-text{
+
+  color:
+    var(--gray);
+
+  font-size:13px;
+
+  max-width:520px;
+
+}
+
+
+.about-text p{
+
+  margin-bottom:18px;
+
+}
+
+
+/* giant number */
+
+.about-number{
+
+  position:relative;
+
+  min-height:420px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border:
+    1px solid
+    var(--line);
+
+  overflow:hidden;
+
+}
+
+
+.about-number::before{
+
+  content:"01";
+
+  position:absolute;
+
+  font-size:270px;
+
+  font-weight:1000;
+
+  color:
+    rgba(255,255,255,.025);
+
+}
+
+
+.about-number strong{
+
+  position:relative;
+
+  z-index:2;
+
+  font-size:13px;
+
+  letter-spacing:5px;
+
+  color:
+    var(--accent);
+
+}
+
+
+/* =========================================================
+   STOCK
+========================================================= */
+
+.stock{
+
+  padding:
+    120px 7%;
+
+  background:
+    #0c0e10;
+
+}
+
+
+.stock-head{
+
+  display:flex;
+
+  align-items:flex-end;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  margin-bottom:55px;
+
+}
+
+
+.stock-head h2{
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+  line-height:1;
+
+}
+
+
+.stock-head p{
+
+  color:
+    var(--gray);
+
+  font-size:11px;
+
+  max-width:280px;
+
+}
+
+
+.stock-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+
+}
+
+
+.car-card{
+
+  background:
+    var(--black3);
+
+  border:
+    1px solid
+    var(--line);
+
+  transition:.35s;
+
+  overflow:hidden;
+
+}
+
+
+.car-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(217,166,46,.5);
+
+}
+
+
+.car-image{
+
+  height:230px;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #30353a,
+      #111315
+    );
+
+  overflow:hidden;
+
+}
+
+
+.car-image::before{
+
+  content:"CAR";
+
+  position:absolute;
+
+  font-size:90px;
+
+  font-weight:1000;
+
+  color:
+    rgba(255,255,255,.035);
+
+}
+
+
+.mini-car{
+
+  width:72%;
+
+  height:80px;
+
+  position:relative;
+
+  z-index:2;
+
+  background:
+    linear-gradient(
+      160deg,
+      #bfc2c4,
+      #303336
+    );
+
+  clip-path:
+
+    polygon(
+      5% 65%,
+      18% 43%,
+      35% 28%,
+      48% 8%,
+      68% 8%,
+      82% 35%,
+      96% 48%,
+      100% 70%,
+      95% 85%,
+      5% 85%
+    );
+
+}
+
+
+.mini-car::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:45%;
+
+  top:-35px;
+
+  width:25%;
+
+  height:45px;
+
+  background:
+    #20262b;
+
+  clip-path:
+    polygon(
+      0 100%,
+      20% 0,
+      80% 0,
+      100% 100%
+    );
+
+}
+
+
+.card-info{
+
+  padding:
+    25px;
+
+}
+
+
+.card-tag{
+
+  color:
+    var(--accent);
+
+  font-size:8px;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+
+}
+
+
+.card-name{
+
+  margin-top:7px;
+
+  font-size:21px;
+
+  font-weight:900;
+
+}
+
+
+.card-meta{
+
+  margin-top:12px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  color:
+    var(--gray);
+
+  font-size:10px;
+
+}
+
+
+.card-price{
+
+  margin-top:20px;
+
+  padding-top:15px;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+}
+
+
+.card-price strong{
+
+  font-size:18px;
+
+}
+
+
+.card-arrow{
+
+  width:30px;
+  height:30px;
+
+  border:
+    1px solid
+    var(--line);
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  color:
+    var(--accent);
+
+}
+
+
+/* =========================================================
+   SERVICE
+========================================================= */
+
+.service{
+
+  padding:
+    120px 7%;
+
+  background:
+    var(--white);
+
+  color:
+    var(--black);
+
+}
+
+
+.service-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:80px;
+
+}
+
+
+.service h2{
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+  line-height:1;
+
+  margin-bottom:25px;
+
+}
+
+
+.service-intro{
+
+  color:
+    #686b6e;
+
+  font-size:13px;
+
+  max-width:480px;
+
+}
+
+
+.service-list{
+
+  border-top:
+    1px solid
+    #d4d5d5;
+
+}
+
+
+.service-item{
+
+  display:grid;
+
+  grid-template-columns:
+    55px 1fr auto;
+
+  gap:20px;
+
+  align-items:center;
+
+  padding:
+    23px 0;
+
+  border-bottom:
+    1px solid
+    #d4d5d5;
+
+}
+
+
+.service-number{
+
+  color:
+    var(--accent);
+
+  font-weight:900;
+
+  font-size:11px;
+
+}
+
+
+.service-name{
+
+  font-weight:900;
+
+  font-size:15px;
+
+}
+
+
+.service-description{
+
+  display:block;
+
+  margin-top:2px;
+
+  color:
+    #777b7e;
+
+  font-size:9px;
+
+}
+
+
+.service-price{
+
+  font-weight:900;
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+
+  padding:
+    130px 7%;
+
+  text-align:center;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      #24282c,
+      #08090a 65%
+    );
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+.contact::before{
+
+  content:"DRIVE";
+
+  position:absolute;
+
+  left:50%;
+
+  top:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  font-size:
+    clamp(100px,22vw,330px);
+
+  font-weight:1000;
+
+  color:
+    rgba(255,255,255,.025);
+
+}
+
+
+.contact-content{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+
+.contact h2{
+
+  font-size:
+    clamp(45px,7vw,90px);
+
+  line-height:.95;
+
+  margin-bottom:25px;
+
+}
+
+
+.contact h2 span{
+
+  color:
+    var(--accent);
+
+}
+
+
+.contact p{
+
+  color:
+    var(--gray);
+
+  font-size:12px;
+
+  margin-bottom:35px;
+
+}
+
+
+/* =========================================================
+   ACCESS
+========================================================= */
+
+.access{
+
+  padding:
+    100px 7%;
+
+  background:
+    #0c0e10;
+
+}
+
+
+.access-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:20px;
+
+}
+
+
+.access-info{
+
+  padding:
+    40px;
+
+  border:
+    1px solid
+    var(--line);
+
+}
+
+
+.access-info h2{
+
+  font-size:28px;
+
+  margin-bottom:30px;
+
+}
+
+
+.access-row{
+
+  display:flex;
+
+  gap:25px;
+
+  padding:
+    14px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  font-size:11px;
+
+}
+
+
+.access-row strong{
+
+  width:70px;
+
+  color:
+    var(--accent);
+
+  font-size:8px;
+
+  letter-spacing:2px;
+
+}
+
+
+.map{
+
+  min-height:350px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+
+    repeating-linear-gradient(
+      45deg,
+      #15181b 0,
+      #15181b 10px,
+      #111416 10px,
+      #111416 20px
+    );
+
+  color:
+    rgba(255,255,255,.25);
+
+  font-size:25px;
+
+  font-weight:900;
+
+  letter-spacing:8px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+  padding:
+    55px 7%;
+
+  background:
+    #050606;
+
+  border-top:
+    2px solid
+    var(--accent);
+
+}
+
+
+.footer-inner{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+}
+
+
+.footer-logo{
+
+  font-size:25px;
+
+  font-weight:1000;
+
+  letter-spacing:4px;
+
+}
+
+
+.footer-logo span{
+
+  color:
+    var(--accent);
+
+}
+
+
+.footer-sub{
+
+  color:
+    var(--gray2);
+
+  font-size:8px;
+
+  letter-spacing:3px;
+
+  margin-top:4px;
+
+}
+
+
+.footer-copy{
+
+  color:
+    #484b4d;
+
+  font-size:9px;
+
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal{
+
+  opacity:0;
+
+  transform:
+    translateY(30px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+
+.reveal.show{
+
+  opacity:1;
+
+  transform:
+    translateY(0);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:850px){
+
+  .header{
+
+    height:65px;
+
+    padding:
+      0 5%;
+
+  }
+
+
+  .nav{
+
+    display:none;
+
+  }
+
+
+  .hero{
+
+    padding-top:65px;
+
+    min-height:
+      900px;
+
+    display:block;
+
+  }
+
+
+  .hero-content{
+
+    padding:
+      80px 7% 0;
+
+  }
+
+
+  .hero h1{
+
+    font-size:
+      clamp(58px,17vw,100px);
+
+  }
+
+
+  .hero h1 span{
+
+    -webkit-text-stroke:
+      1px
+      rgba(244,244,241,.65);
+
+  }
+
+
+  .hero-copy{
+
+    font-size:12px;
+
+  }
+
+
+  .car-visual{
+
+    width:120vw;
+
+    right:-35%;
+
+    bottom:105px;
+
+    transform:
+      scale(.9);
+
+  }
+
+
+  .spec-bar{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .spec{
+
+    padding:
+      14px 6%;
+
+  }
+
+
+  .spec:nth-child(2){
+
+    border-right:0;
+
+  }
+
+
+  .about{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .about-grid{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+  }
+
+
+  .about-number{
+
+    min-height:300px;
+
+  }
+
+
+  .stock{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .stock-head{
+
+    display:block;
+
+  }
+
+
+  .stock-head p{
+
+    margin-top:20px;
+
+  }
+
+
+  .stock-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .car-image{
+
+    height:210px;
+
+  }
+
+
+  .service{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .service-grid{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+  }
+
+
+  .service-item{
+
+    grid-template-columns:
+      35px 1fr;
+
+  }
+
+
+  .service-price{
+
+    grid-column:2;
+
+  }
+
+
+  .contact{
+
+    padding:
+      100px 6%;
+
+  }
+
+
+  .access{
+
+    padding:
+      80px 6%;
+
+  }
+
+
+  .access-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .map{
+
+    min-height:250px;
+
+  }
+
+
+  .footer-inner{
+
+    display:block;
+
+  }
+
+
+  .footer-copy{
+
+    margin-top:25px;
+
+  }
+
+
+  .hero-actions{
+
+    flex-direction:column;
+
+  }
+
+
+  .button{
+
+    width:100%;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+  <a href="#" class="logo">
+
+    <div class="logo-symbol">
+      H
+    </div>
+
+    <div class="logo-text">
+      HOMIC <span>MOTOR</span>
+    </div>
+
+  </a>
+
+
+  <nav class="nav">
+
+    <a href="#about">
+      ABOUT
+    </a>
+
+    <a href="#stock">
+      STOCK
+    </a>
+
+    <a href="#service">
+      SERVICE
+    </a>
+
+    <a href="#access">
+      ACCESS
+    </a>
+
+    <a
+      href="#contact"
+      class="nav-cta"
+    >
+      CONTACT
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+  <div class="hero-content reveal">
+
+    <div class="hero-small">
+      HOMIC MOTOR WORKS / SINCE 2026
+    </div>
+
+
+    <h1>
+
+      DRIVE<br>
+
+      <span>YOUR WAY.</span>
+
+    </h1>
+
+
+    <p class="hero-copy">
+
+      車を買うだけじゃない。<br>
+      その先の「走る楽しさ」まで提案する。
+
+      新車・中古車販売から、
+      カスタム、整備、車検まで。
+
+      あなたのカーライフを、
+      一台ずつ仕上げます。
+
+    </p>
+
+
+    <div class="hero-actions">
+
+      <a
+        href="#stock"
+        class="button button-main"
+      >
+        STOCK CARS
+      </a>
+
+
+      <a
+        href="#contact"
+        class="button button-outline"
+      >
+        CONTACT
+      </a>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- CAR -->
+
+  <div class="car-visual">
+
+    <div class="car-shadow"></div>
+
+
+    <div class="car-window"></div>
+
+
+    <div class="car-body"></div>
+
+
+    <div class="wheel left"></div>
+
+    <div class="wheel right"></div>
+
+
+    <div class="headlight"></div>
+
+  </div>
+
+
+
+  <!-- SPECS -->
+
+  <div class="spec-bar">
+
+    <div class="spec">
+
+      <div class="spec-label">
+        SALES
+      </div>
+
+      <div class="spec-value">
+        新車 / 中古車
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        CUSTOM
+      </div>
+
+      <div class="spec-value">
+        カスタム
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        MAINTENANCE
+      </div>
+
+      <div class="spec-value">
+        整備 / 車検
+      </div>
+
+    </div>
+
+
+    <div class="spec">
+
+      <div class="spec-label">
+        SUPPORT
+      </div>
+
+      <div class="spec-value">
+        全国対応
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MARQUEE
+========================================================= -->
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    <span>
+      DRIVE YOUR WAY.
+    </span>
+
+    <span>
+      HOMIC MOTOR WORKS
+    </span>
+
+    <span>
+      CUSTOM / SALES / SERVICE
+    </span>
+
+    <span>
+      DRIVE YOUR WAY.
+    </span>
+
+    <span>
+      HOMIC MOTOR WORKS
+    </span>
+
+    <span>
+      CUSTOM / SALES / SERVICE
+    </span>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+  class="about"
+  id="about"
+>
+
+  <div class="about-grid">
+
+
+    <div class="reveal">
+
+      <div class="section-number">
+        01 / ABOUT US
+      </div>
+
+
+      <h2>
+
+        車を、<br>
+        <span>もっと自由に。</span>
+
+      </h2>
+
+
+      <div class="about-text">
+
+        <p>
+
+          私たちは、
+          車を「移動するための道具」だけだとは考えていません。
+
+        </p>
+
+
+        <p>
+
+          通勤。
+          ドライブ。
+          家族との時間。
+          趣味。
+          仕事。
+
+          一人ひとりのライフスタイルに合わせて、
+          本当に必要な一台を一緒に考えます。
+
+        </p>
+
+
+        <p>
+
+          購入して終わりではなく、
+          その後の整備やカスタムまで。
+
+          長く付き合える車屋を目指しています。
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="about-number reveal">
+
+      <strong>
+        YOUR CAR.<br>
+        YOUR STORY.
+      </strong>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STOCK
+========================================================= -->
+
+<section
+  class="stock"
+  id="stock"
+>
+
+  <div class="stock-head reveal">
+
+    <div>
+
+      <div class="section-number">
+        02 / STOCK
+      </div>
+
+      <h2>
+        STOCK CARS
+      </h2>
+
+    </div>
+
+
+    <p>
+
+      ※こちらはサンプルです。<br>
+      実際の在庫車両に合わせて
+      写真・価格・スペックを
+      変更できます。
+
+    </p>
+
+  </div>
+
+
+  <div class="stock-grid">
+
+
+    <!-- CARD 1 -->
+
+    <article class="car-card reveal">
+
+      <div class="car-image">
+
+        <div class="mini-car"></div>
+
+      </div>
+
+
+      <div class="card-info">
+
+        <div class="card-tag">
+          PREMIUM
+        </div>
+
+
+        <div class="card-name">
+          HOMIC GT
+        </div>
+
+
+        <div class="card-meta">
+
+          <span>
+            2025 / 10,000km
+          </span>
+
+          <span>
+            AT
+          </span>
+
+        </div>
+
+
+        <div class="card-price">
+
+          <strong>
+            ¥2,980,000
+          </strong>
+
+          <div class="card-arrow">
+            →
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CARD 2 -->
+
+    <article class="car-card reveal">
+
+      <div class="car-image">
+
+        <div
+          class="mini-car"
+          style="
+            background:
+            linear-gradient(
+              160deg,
+              #e4e4e2,
+              #66696b
+            );
+          "
+        ></div>
+
+      </div>
+
+
+      <div class="card-info">
+
+        <div class="card-tag">
+          SUV
+        </div>
+
+
+        <div class="card-name">
+          HOMIC X
+        </div>
+
+
+        <div class="card-meta">
+
+          <span>
+            2024 / 18,000km
+          </span>
+
+          <span>
+            4WD
+          </span>
+
+        </div>
+
+
+        <div class="card-price">
+
+          <strong>
+            ¥3,480,000
+          </strong>
+
+          <div class="card-arrow">
+            →
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CARD 3 -->
+
+    <article class="car-card reveal">
+
+      <div class="car-image">
+
+        <div
+          class="mini-car"
+          style="
+            background:
+            linear-gradient(
+              160deg,
+              #d4a52d,
+              #5a471c
+            );
+          "
+        ></div>
+
+      </div>
+
+
+      <div class="card-info">
+
+        <div class="card-tag">
+          CUSTOM
+        </div>
+
+
+        <div class="card-name">
+          HOMIC R
+        </div>
+
+
+        <div class="card-meta">
+
+          <span>
+            2023 / 25,000km
+          </span>
+
+          <span>
+            6MT
+          </span>
+
+        </div>
+
+
+        <div class="card-price">
+
+          <strong>
+            ¥2,680,000
+          </strong>
+
+          <div class="card-arrow">
+            →
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICE
+========================================================= -->
+
+<section
+  class="service"
+  id="service"
+>
+
+  <div class="service-grid">
+
+
+    <div class="reveal">
+
+      <div class="section-number">
+        03 / SERVICE
+      </div>
+
+
+      <h2>
+
+        BUY.<br>
+        BUILD.<br>
+        <span>DRIVE.</span>
+
+      </h2>
+
+
+      <p class="service-intro">
+
+        車両販売だけではありません。
+
+        「こんな車にしたい」
+        「ここを直したい」
+        「もっと格好よくしたい」
+
+        そんな相談も大歓迎です。
+
+      </p>
+
+    </div>
+
+
+
+    <div class="service-list reveal">
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          01
+        </div>
+
+
+        <div>
+
+          <div class="service-name">
+            車両販売
+          </div>
+
+          <span class="service-description">
+            新車・中古車・注文販売
+          </span>
+
+        </div>
+
+
+        <div class="service-price">
+          ASK
+        </div>
+
+      </div>
+
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          02
+        </div>
+
+
+        <div>
+
+          <div class="service-name">
+            カスタム
+          </div>
+
+          <span class="service-description">
+            ホイール・車高調・エアロ等
+          </span>
+
+        </div>
+
+
+        <div class="service-price">
+          ASK
+        </div>
+
+      </div>
+
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          03
+        </div>
+
+
+        <div>
+
+          <div class="service-name">
+            車検・整備
+          </div>
+
+          <span class="service-description">
+            日常点検から車検まで
+          </span>
+
+        </div>
+
+
+        <div class="service-price">
+          ASK
+        </div>
+
+      </div>
+
+
+
+      <div class="service-item">
+
+        <div class="service-number">
+          04
+        </div>
+
+
+        <div>
+
+          <div class="service-name">
+            買取
+          </div>
+
+          <span class="service-description">
+            査定・出張査定対応
+          </span>
+
+        </div>
+
+
+        <div class="service-price">
+          FREE
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+  class="contact"
+  id="contact"
+>
+
+  <div class="contact-content reveal">
+
+    <div class="section-number">
+      04 / CONTACT
+    </div>
+
+
+    <h2>
+
+      YOUR NEXT<br>
+      <span>DRIVE.</span>
+
+    </h2>
+
+
+    <p>
+
+      車探し、カスタム、整備。
+      まずは気軽にご相談ください。
+
+    </p>
+
+
+    <a
+      href="#access"
+      class="button button-main"
+    >
+      CONTACT US
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACCESS
+========================================================= -->
+
+<section
+  class="access"
+  id="access"
+>
+
+  <div class="section-number">
+    05 / ACCESS
+  </div>
+
+
+  <div class="access-grid">
+
+
+    <div class="access-info reveal">
+
+      <h2>
+        HOMIC MOTOR WORKS
+      </h2>
+
+
+      <div class="access-row">
+
+        <strong>
+          ADDRESS
+        </strong>
+
+        <span>
+          愛媛県〇〇市〇〇町1-2-3
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          OPEN
+        </strong>
+
+        <span>
+          10:00 - 19:00
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          CLOSED
+        </strong>
+
+        <span>
+          水曜日
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          TEL
+        </strong>
+
+        <span>
+          000-0000-0000
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          SNS
+        </strong>
+
+        <span>
+          Instagram / X
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="map reveal">
+      MAP
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <div class="footer-logo">
+
+        HOMIC
+        <span>MOTOR WORKS</span>
+
+      </div>
+
+
+      <div class="footer-sub">
+        DRIVE YOUR WAY.
+      </div>
+
+    </div>
+
+
+    <div class="footer-copy">
+      © 2026 HOMIC MOTOR WORKS
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+
+const observer =
+new IntersectionObserver(
+
+  (entries)=>{
+
+    entries.forEach(
+
+      (entry)=>{
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("show");
+
+          observer.unobserve(
+            entry.target
+          );
+
+        }
+
+      }
+
+    );
+
+  },
+
+  {
+    threshold:.12
+  }
+
+);
+
+
+reveals.forEach(
+  item =>
+    observer.observe(item)
+);
+
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+window.addEventListener(
+
+  "scroll",
+
+  ()=>{
+
+    const header =
+      document.querySelector(".header");
+
+
+    if(window.scrollY > 40){
+
+      header.style.boxShadow =
+        "0 12px 40px rgba(0,0,0,.45)";
+
+    }else{
+
+      header.style.boxShadow =
+        "none";
+
+    }
+
+  }
+
+);
+
+
+</script>
+
+
+</body>
+</html>
