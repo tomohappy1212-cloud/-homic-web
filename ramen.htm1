@@ -1,0 +1,2794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>HOMIC RAMEN</title>
+
+<meta
+  name="description"
+  content="HOMIC RAMEN。一杯に魂を込める、ラーメン店のホームページサンプル。"
+>
+
+<style>
+
+/* =========================================================
+   HOMIC RAMEN
+   JAPANESE RAMEN BRAND TEMPLATE
+========================================================= */
+
+:root{
+
+  --black:#0d0b0a;
+
+  --black2:#171311;
+
+  --red:#9d211b;
+
+  --red-dark:#741612;
+
+  --red-light:#c94a3e;
+
+  --cream:#eee3ce;
+
+  --cream-dark:#d8c8ac;
+
+  --gold:#b7924c;
+
+  --white:#fffaf0;
+
+  --gray:#958d82;
+
+  --line:rgba(238,227,206,.18);
+
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+body{
+
+  background:var(--black);
+
+  color:var(--cream);
+
+  font-family:
+
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    Meiryo,
+    sans-serif;
+
+  line-height:1.8;
+
+  overflow-x:hidden;
+
+}
+
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+button{
+
+  font-family:inherit;
+
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.vertical{
+
+  writing-mode:vertical-rl;
+
+  text-orientation:mixed;
+
+}
+
+
+.red{
+  color:var(--red-light);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  height:76px;
+
+  padding:
+    0 5%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  z-index:1000;
+
+  background:
+    rgba(13,11,10,.94);
+
+  border-bottom:
+    1px solid
+    rgba(157,33,27,.35);
+
+}
+
+
+.logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:13px;
+
+}
+
+
+.logo-mark{
+
+  width:40px;
+  height:40px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--red);
+
+  color:var(--white);
+
+  font-family:Georgia,serif;
+
+  font-size:19px;
+
+  font-weight:bold;
+
+}
+
+
+.logo-text{
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:20px;
+
+  letter-spacing:4px;
+
+}
+
+
+.logo-text span{
+
+  color:var(--red-light);
+
+}
+
+
+.nav{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+}
+
+
+.nav a{
+
+  font-size:10px;
+
+  letter-spacing:2px;
+
+  color:#c9bda9;
+
+  transition:.25s;
+
+}
+
+
+.nav a:hover{
+
+  color:var(--red-light);
+
+}
+
+
+.nav-button{
+
+  padding:
+    10px 18px;
+
+  background:var(--red);
+
+  color:var(--white)!important;
+
+}
+
+
+.nav-button:hover{
+
+  background:var(--red-light);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  min-height:100vh;
+
+  padding-top:76px;
+
+  display:grid;
+
+  grid-template-columns:
+    48% 52%;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 70% 50%,
+      rgba(157,33,27,.22),
+      transparent 32%
+    ),
+
+    var(--black);
+
+}
+
+
+/* BACKGROUND JAPANESE LETTER */
+
+.hero::before{
+
+  content:"魂";
+
+  position:absolute;
+
+  right:-60px;
+
+  top:120px;
+
+  font-family:
+    serif;
+
+  font-size:
+    min(55vw,700px);
+
+  line-height:.8;
+
+  color:
+    rgba(157,33,27,.055);
+
+  pointer-events:none;
+
+}
+
+
+/* LEFT */
+
+.hero-content{
+
+  display:flex;
+
+  align-items:center;
+
+  padding:
+    70px 8%;
+
+  position:relative;
+
+  z-index:3;
+
+}
+
+
+.hero-copy{
+
+  max-width:560px;
+
+}
+
+
+.hero-kana{
+
+  color:var(--red-light);
+
+  font-size:11px;
+
+  letter-spacing:5px;
+
+  font-weight:bold;
+
+  margin-bottom:22px;
+
+}
+
+
+.hero h1{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-weight:bold;
+
+  font-size:
+    clamp(55px,7vw,100px);
+
+  line-height:1.05;
+
+  letter-spacing:
+    .08em;
+
+  margin-bottom:27px;
+
+}
+
+
+.hero h1 span{
+
+  color:var(--red-light);
+
+}
+
+
+.hero-description{
+
+  color:var(--gray);
+
+  font-size:13px;
+
+  max-width:460px;
+
+  margin-bottom:34px;
+
+}
+
+
+.hero-buttons{
+
+  display:flex;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
+}
+
+
+.button{
+
+  min-height:52px;
+
+  padding:
+    13px 26px;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:11px;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+
+  transition:.3s;
+
+}
+
+
+.button-red{
+
+  background:var(--red);
+
+  color:var(--white);
+
+}
+
+
+.button-red:hover{
+
+  background:var(--red-light);
+
+  transform:translateY(-3px);
+
+}
+
+
+.button-line{
+
+  border:
+    1px solid
+    rgba(238,227,206,.3);
+
+}
+
+
+.button-line:hover{
+
+  border-color:var(--red-light);
+
+  color:var(--red-light);
+
+}
+
+
+/* =========================================================
+   RAMEN BOWL HERO
+========================================================= */
+
+.hero-visual{
+
+  position:relative;
+
+  min-height:650px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #211914,
+      #0b0908
+    );
+
+  overflow:hidden;
+
+}
+
+
+/* red circle */
+
+.hero-visual::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:
+    min(520px,75vw);
+
+  height:
+    min(520px,75vw);
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    rgba(157,33,27,.55);
+
+  box-shadow:
+    0 0 0 35px
+    rgba(157,33,27,.035),
+
+    0 0 0 70px
+    rgba(157,33,27,.025);
+
+}
+
+
+/* steam */
+
+.steam{
+
+  position:absolute;
+
+  width:12px;
+
+  height:170px;
+
+  border-left:
+    3px solid
+    rgba(238,227,206,.12);
+
+  border-radius:50%;
+
+  filter:blur(2px);
+
+  animation:
+    steam 4s ease-in-out infinite;
+
+}
+
+
+.steam.one{
+
+  transform:
+    translate(-90px,-250px)
+    rotate(8deg);
+
+}
+
+
+.steam.two{
+
+  transform:
+    translate(0,-270px)
+    rotate(-5deg);
+
+  animation-delay:
+    1s;
+
+}
+
+
+.steam.three{
+
+  transform:
+    translate(90px,-250px)
+    rotate(7deg);
+
+  animation-delay:
+    2s;
+
+}
+
+
+@keyframes steam{
+
+  0%,100%{
+
+    opacity:.25;
+
+    transform:
+      translateY(10px)
+      scaleY(.9);
+
+  }
+
+  50%{
+
+    opacity:.7;
+
+    transform:
+      translateY(-15px)
+      scaleY(1.05);
+
+  }
+
+}
+
+
+/* BOWL */
+
+.bowl{
+
+  position:relative;
+
+  width:410px;
+
+  height:300px;
+
+  z-index:4;
+
+}
+
+
+.bowl-top{
+
+  position:absolute;
+
+  top:38px;
+  left:10px;
+
+  width:390px;
+  height:155px;
+
+  border-radius:
+    50%;
+
+  background:
+
+    radial-gradient(
+      ellipse at center,
+      #342014 0 54%,
+      #21130e 55% 70%,
+      var(--red) 71% 77%,
+      #53130f 78% 100%
+    );
+
+  box-shadow:
+    0 20px 35px
+    rgba(0,0,0,.65);
+
+}
+
+
+.bowl-soup{
+
+  position:absolute;
+
+  top:58px;
+  left:45px;
+
+  width:320px;
+  height:110px;
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(
+      ellipse at center,
+      #4d2815,
+      #241208
+    );
+
+  border:
+    5px solid
+    #4e281b;
+
+}
+
+
+/* noodles */
+
+.noodles{
+
+  position:absolute;
+
+  width:245px;
+  height:65px;
+
+  top:76px;
+  left:80px;
+
+  z-index:3;
+
+}
+
+
+.noodle{
+
+  position:absolute;
+
+  width:95px;
+  height:17px;
+
+  border-top:
+    5px solid
+    #e5c981;
+
+  border-radius:50%;
+
+}
+
+
+.noodle:nth-child(1){
+  left:0;
+  top:8px;
+  transform:rotate(8deg);
+}
+
+.noodle:nth-child(2){
+  left:35px;
+  top:24px;
+  transform:rotate(-4deg);
+}
+
+.noodle:nth-child(3){
+  left:75px;
+  top:4px;
+  transform:rotate(10deg);
+}
+
+.noodle:nth-child(4){
+  left:120px;
+  top:28px;
+  transform:rotate(-8deg);
+}
+
+.noodle:nth-child(5){
+  left:155px;
+  top:8px;
+  transform:rotate(5deg);
+}
+
+
+/* toppings */
+
+.topping{
+
+  position:absolute;
+
+  z-index:5;
+
+}
+
+
+.chashu{
+
+  width:63px;
+  height:48px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #e2b78b 0 18%,
+      #8f4930 19% 52%,
+      #c9825a 53% 100%
+    );
+
+  top:67px;
+  left:100px;
+
+  transform:rotate(-12deg);
+
+}
+
+
+.egg{
+
+  width:53px;
+  height:53px;
+
+  border-radius:50%;
+
+  background:#f2e4bd;
+
+  top:73px;
+  right:100px;
+
+}
+
+
+.egg::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  background:#e28b2e;
+
+  top:15px;
+  left:15px;
+
+}
+
+
+.nori{
+
+  width:45px;
+  height:65px;
+
+  background:#17241b;
+
+  top:50px;
+  left:190px;
+
+  transform:
+    rotate(12deg);
+
+}
+
+
+.green-onion{
+
+  width:9px;
+  height:55px;
+
+  background:#73924e;
+
+  border-radius:50%;
+
+  top:45px;
+  left:245px;
+
+  transform:rotate(35deg);
+
+}
+
+
+/* bowl body */
+
+.bowl-body{
+
+  position:absolute;
+
+  left:38px;
+  top:125px;
+
+  width:334px;
+  height:140px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #631510,
+      var(--red),
+      #731913
+    );
+
+  border-radius:
+    0 0 150px 150px;
+
+  z-index:2;
+
+  box-shadow:
+    inset 0 -15px 25px
+    rgba(0,0,0,.25);
+
+}
+
+
+.bowl-body::after{
+
+  content:"HOMIC";
+
+  position:absolute;
+
+  left:50%;
+
+  top:54px;
+
+  transform:
+    translateX(-50%);
+
+  font-family:
+    Georgia,serif;
+
+  color:
+    rgba(255,245,220,.85);
+
+  font-size:21px;
+
+  letter-spacing:4px;
+
+}
+
+
+/* =========================================================
+   BRAND STRIP
+========================================================= */
+
+.brand-strip{
+
+  background:var(--red);
+
+  color:var(--white);
+
+  padding:
+    18px 0;
+
+  overflow:hidden;
+
+  white-space:nowrap;
+
+}
+
+
+.brand-track{
+
+  display:inline-block;
+
+  animation:
+    marquee 22s linear infinite;
+
+}
+
+
+.brand-track span{
+
+  margin:
+    0 35px;
+
+  font-size:11px;
+
+  letter-spacing:4px;
+
+  font-weight:bold;
+
+}
+
+
+@keyframes marquee{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story{
+
+  padding:
+    120px 7%;
+
+  background:var(--cream);
+
+  color:var(--black);
+
+}
+
+
+.section-label{
+
+  color:var(--red);
+
+  font-size:10px;
+
+  letter-spacing:4px;
+
+  font-weight:bold;
+
+  margin-bottom:16px;
+
+}
+
+
+.story-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:80px;
+
+  align-items:center;
+
+}
+
+
+.story h2{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:
+    clamp(42px,5vw,70px);
+
+  line-height:1.25;
+
+  letter-spacing:.06em;
+
+  margin-bottom:30px;
+
+}
+
+
+.story-text{
+
+  color:#756d63;
+
+  font-size:13px;
+
+}
+
+
+.story-text p{
+
+  margin-bottom:18px;
+
+}
+
+
+/* vertical stamp */
+
+.story-stamp{
+
+  min-height:500px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+
+    radial-gradient(
+      circle,
+      #b92e22,
+      #791811
+    );
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+.story-stamp::before{
+
+  content:"こだわり";
+
+  writing-mode:
+    vertical-rl;
+
+  font-family:
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:75px;
+
+  color:rgba(255,250,240,.9);
+
+  letter-spacing:.15em;
+
+}
+
+
+.story-stamp::after{
+
+  content:"HOMIC RAMEN";
+
+  position:absolute;
+
+  bottom:25px;
+  left:30px;
+
+  color:
+    rgba(255,255,255,.45);
+
+  font-size:9px;
+
+  letter-spacing:4px;
+
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-section{
+
+  padding:
+    120px 7%;
+
+  background:
+    var(--black2);
+
+}
+
+
+.menu-head{
+
+  display:flex;
+
+  align-items:end;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  margin-bottom:55px;
+
+}
+
+
+.menu-head h2{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+  line-height:1;
+
+}
+
+
+.menu-head p{
+
+  max-width:260px;
+
+  color:var(--gray);
+
+  font-size:11px;
+
+}
+
+
+.menu-list{
+
+  border-top:
+    1px solid
+    var(--line);
+
+}
+
+
+.menu-item{
+
+  display:grid;
+
+  grid-template-columns:
+    70px 1fr auto;
+
+  align-items:center;
+
+  gap:25px;
+
+  padding:
+    28px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  transition:.3s;
+
+}
+
+
+.menu-item:hover{
+
+  background:
+    rgba(157,33,27,.08);
+
+  padding-left:18px;
+
+  padding-right:18px;
+
+}
+
+
+.menu-number{
+
+  color:var(--red-light);
+
+  font-family:
+    Georgia,serif;
+
+  font-size:20px;
+
+}
+
+
+.menu-name{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:24px;
+
+}
+
+
+.menu-detail{
+
+  display:block;
+
+  color:var(--gray);
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+
+  font-size:10px;
+
+  margin-top:3px;
+
+}
+
+
+.menu-price{
+
+  color:var(--cream);
+
+  font-size:16px;
+
+  font-weight:bold;
+
+}
+
+
+/* =========================================================
+   SECRET MENU
+========================================================= */
+
+.secret{
+
+  margin-top:45px;
+
+  padding:
+    35px;
+
+  border:
+    1px solid
+    rgba(183,146,76,.35);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(183,146,76,.07),
+      transparent
+    );
+
+}
+
+
+.secret-title{
+
+  color:var(--gold);
+
+  font-size:9px;
+
+  letter-spacing:4px;
+
+  margin-bottom:8px;
+
+}
+
+
+.secret h3{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:28px;
+
+  margin-bottom:8px;
+
+}
+
+
+.secret p{
+
+  color:var(--gray);
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   CHEF
+========================================================= */
+
+.chef{
+
+  padding:
+    120px 7%;
+
+  background:var(--cream);
+
+  color:var(--black);
+
+}
+
+
+.chef-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    42% 58%;
+
+  gap:75px;
+
+  align-items:center;
+
+}
+
+
+.chef-photo{
+
+  min-height:520px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #4d3626,
+      #17110d
+    );
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  overflow:hidden;
+
+}
+
+
+.chef-photo::before{
+
+  content:"店主";
+
+  writing-mode:
+    vertical-rl;
+
+  font-family:
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:90px;
+
+  color:
+    rgba(255,245,225,.7);
+
+}
+
+
+.chef-photo::after{
+
+  content:"MASTER";
+
+  position:absolute;
+
+  bottom:25px;
+  left:30px;
+
+  color:var(--red-light);
+
+  letter-spacing:5px;
+
+  font-size:10px;
+
+}
+
+
+.chef h2{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:
+    clamp(40px,5vw,68px);
+
+  line-height:1.2;
+
+  margin-bottom:28px;
+
+}
+
+
+.chef-copy{
+
+  color:#776f65;
+
+  font-size:13px;
+
+}
+
+
+.chef-copy p{
+
+  margin-bottom:18px;
+
+}
+
+
+.chef-sign{
+
+  margin-top:30px;
+
+  font-family:
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:28px;
+
+}
+
+
+/* =========================================================
+   RESERVATION
+========================================================= */
+
+.reserve{
+
+  padding:
+    125px 7%;
+
+  text-align:center;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(157,33,27,.25),
+      transparent 45%
+    ),
+
+    var(--black);
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+.reserve::before{
+
+  content:"一杯に、魂を。";
+
+  position:absolute;
+
+  left:50%;
+
+  top:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  white-space:nowrap;
+
+  font-family:
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size:
+    clamp(55px,11vw,150px);
+
+  color:
+    rgba(157,33,27,.055);
+
+}
+
+
+.reserve-content{
+
+  position:relative;
+
+  z-index:2;
+
+}
+
+
+.reserve h2{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:
+    clamp(42px,6vw,75px);
+
+  line-height:1.2;
+
+  margin-bottom:22px;
+
+}
+
+
+.reserve p{
+
+  color:var(--gray);
+
+  font-size:12px;
+
+  margin-bottom:32px;
+
+}
+
+
+/* =========================================================
+   ACCESS
+========================================================= */
+
+.access{
+
+  padding:
+    110px 7%;
+
+  background:
+    #12100e;
+
+}
+
+
+.access-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:20px;
+
+}
+
+
+.access-info{
+
+  padding:
+    40px;
+
+  border:
+    1px solid
+    var(--line);
+
+  background:
+    #1a1613;
+
+}
+
+
+.access-info h2{
+
+  font-family:
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+
+  font-size:32px;
+
+  margin-bottom:28px;
+
+}
+
+
+.access-row{
+
+  display:flex;
+
+  gap:20px;
+
+  padding:
+    15px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  font-size:12px;
+
+}
+
+
+.access-row strong{
+
+  min-width:70px;
+
+  color:var(--red-light);
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+}
+
+
+.map{
+
+  min-height:350px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+
+    repeating-linear-gradient(
+      45deg,
+      #201b17 0,
+      #201b17 10px,
+      #1d1815 10px,
+      #1d1815 20px
+    );
+
+  border:
+    1px solid
+    var(--line);
+
+  color:
+    rgba(238,227,206,.4);
+
+  font-family:
+    Georgia,serif;
+
+  font-size:25px;
+
+  letter-spacing:5px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+  padding:
+    55px 7%;
+
+  background:#080706;
+
+  border-top:
+    3px solid
+    var(--red);
+
+}
+
+
+.footer-inner{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+  gap:30px;
+
+}
+
+
+.footer-logo{
+
+  font-family:
+    Georgia,serif;
+
+  font-size:26px;
+
+  letter-spacing:5px;
+
+}
+
+
+.footer-logo span{
+
+  color:var(--red-light);
+
+}
+
+
+.footer-sub{
+
+  color:#625c54;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  margin-top:5px;
+
+}
+
+
+.footer-copy{
+
+  color:#4d4740;
+
+  font-size:9px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+  .header{
+
+    height:64px;
+
+    padding:0 5%;
+
+  }
+
+
+  .nav{
+
+    display:none;
+
+  }
+
+
+  .hero{
+
+    display:block;
+
+    padding-top:64px;
+
+  }
+
+
+  .hero-content{
+
+    padding:
+      80px 7% 55px;
+
+  }
+
+
+  .hero h1{
+
+    font-size:55px;
+
+  }
+
+
+  .hero-visual{
+
+    min-height:530px;
+
+  }
+
+
+  .bowl{
+
+    transform:
+      scale(.76);
+
+  }
+
+
+  .hero::before{
+
+    font-size:420px;
+
+    right:-170px;
+
+  }
+
+
+  .brand-track span{
+
+    margin:0 22px;
+
+  }
+
+
+  .story{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .story-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+  }
+
+
+  .story-stamp{
+
+    min-height:380px;
+
+  }
+
+
+  .menu-section{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .menu-head{
+
+    display:block;
+
+  }
+
+
+  .menu-head p{
+
+    margin-top:20px;
+
+  }
+
+
+  .menu-item{
+
+    grid-template-columns:
+      45px 1fr;
+
+    gap:12px;
+
+  }
+
+
+  .menu-price{
+
+    grid-column:2;
+
+  }
+
+
+  .secret{
+
+    padding:25px;
+
+  }
+
+
+  .chef{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .chef-grid{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+  }
+
+
+  .chef-photo{
+
+    min-height:380px;
+
+  }
+
+
+  .reserve{
+
+    padding:
+      95px 6%;
+
+  }
+
+
+  .access{
+
+    padding:
+      85px 6%;
+
+  }
+
+
+  .access-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+
+  .map{
+
+    min-height:250px;
+
+  }
+
+
+  .footer-inner{
+
+    display:block;
+
+  }
+
+
+  .footer-copy{
+
+    margin-top:25px;
+
+  }
+
+
+  .hero-buttons{
+
+    flex-direction:column;
+
+  }
+
+
+  .button{
+
+    width:100%;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+  <a href="#" class="logo">
+
+    <div class="logo-mark">
+      麺
+    </div>
+
+    <div class="logo-text">
+      HOM<span>IC</span>
+    </div>
+
+  </a>
+
+
+  <nav class="nav">
+
+    <a href="#story">
+      STORY
+    </a>
+
+    <a href="#menu">
+      MENU
+    </a>
+
+    <a href="#chef">
+      MASTER
+    </a>
+
+    <a href="#access">
+      ACCESS
+    </a>
+
+    <a
+      href="#reserve"
+      class="nav-button"
+    >
+      店舗情報
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+  <div class="hero-content">
+
+    <div class="hero-copy">
+
+      <div class="hero-kana">
+        HOMIC RAMEN / SINCE 2026
+      </div>
+
+
+      <h1>
+
+        一杯に、<br>
+
+        <span>魂を。</span>
+
+      </h1>
+
+
+      <p class="hero-description">
+
+        厳選した素材。
+        丁寧に炊き上げたスープ。
+        毎日店主が仕込む自家製麺。
+
+        すべては、
+        「また食べたい」と思ってもらえる
+        一杯のために。
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="#menu"
+          class="button button-red"
+        >
+          お品書きを見る
+        </a>
+
+
+        <a
+          href="#access"
+          class="button button-line"
+        >
+          店舗情報
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="hero-visual">
+
+    <div class="steam one"></div>
+
+    <div class="steam two"></div>
+
+    <div class="steam three"></div>
+
+
+    <div class="bowl">
+
+      <div class="bowl-top">
+
+        <div class="bowl-soup"></div>
+
+
+        <div class="noodles">
+
+          <div class="noodle"></div>
+          <div class="noodle"></div>
+          <div class="noodle"></div>
+          <div class="noodle"></div>
+          <div class="noodle"></div>
+
+        </div>
+
+
+        <div class="topping chashu"></div>
+
+        <div class="topping egg"></div>
+
+        <div class="topping nori"></div>
+
+        <div class="topping green-onion"></div>
+
+      </div>
+
+
+      <div class="bowl-body"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BRAND STRIP
+========================================================= -->
+
+<div class="brand-strip">
+
+  <div class="brand-track">
+
+    <span>一杯に、魂を。</span>
+
+    <span>自家製麺</span>
+
+    <span>厳選素材</span>
+
+    <span>丁寧に、ひとつずつ。</span>
+
+    <span>HOMIC RAMEN</span>
+
+    <span>一杯に、魂を。</span>
+
+    <span>自家製麺</span>
+
+    <span>厳選素材</span>
+
+    <span>丁寧に、ひとつずつ。</span>
+
+    <span>HOMIC RAMEN</span>
+
+  </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     STORY
+========================================================= -->
+
+<section
+  class="story"
+  id="story"
+>
+
+  <div class="story-grid">
+
+
+    <div>
+
+      <div class="section-label">
+        01 / OUR STORY
+      </div>
+
+
+      <h2>
+
+        うまい一杯を、<br>
+        まっすぐに。
+
+      </h2>
+
+
+      <div class="story-text">
+
+        <p>
+
+          HOMIC RAMENが大切にしているのは、
+          流行を追いかけることではありません。
+
+        </p>
+
+
+        <p>
+
+          毎日食べても飽きない。
+
+          一口目で「うまい」と思い、
+          食べ終わったあとに
+          「また来よう」と思ってもらえる。
+
+        </p>
+
+
+        <p>
+
+          そのために、
+          素材選びから仕込みまで
+          一切妥協しません。
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="story-stamp"></div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MENU
+========================================================= -->
+
+<section
+  class="menu-section"
+  id="menu"
+>
+
+  <div class="menu-head">
+
+    <div>
+
+      <div class="section-label">
+        02 / MENU
+      </div>
+
+      <h2>
+        お品書き
+      </h2>
+
+    </div>
+
+
+    <p>
+
+      ※価格・メニューは
+      サンプルです。
+      実際の店舗に合わせて
+      自由に変更できます。
+
+    </p>
+
+  </div>
+
+
+  <div class="menu-list">
+
+
+    <div class="menu-item">
+
+      <div class="menu-number">
+        一
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          特製醤油らーめん
+        </div>
+
+        <span class="menu-detail">
+          鶏と魚介の旨味を重ねた、HOMICの看板。
+        </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥900
+      </div>
+
+    </div>
+
+
+
+    <div class="menu-item">
+
+      <div class="menu-number">
+        二
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          濃厚豚骨らーめん
+        </div>
+
+        <span class="menu-detail">
+          豚骨をじっくり炊き上げた濃厚スープ。
+        </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥950
+      </div>
+
+    </div>
+
+
+
+    <div class="menu-item">
+
+      <div class="menu-number">
+        三
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          味噌らーめん
+        </div>
+
+        <span class="menu-detail">
+          数種類の味噌を合わせた深いコク。
+        </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥950
+      </div>
+
+    </div>
+
+
+
+    <div class="menu-item">
+
+      <div class="menu-number">
+        四
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          特製つけ麺
+        </div>
+
+        <span class="menu-detail">
+          濃厚つけ汁と自家製太麺。
+        </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥1,050
+      </div>
+
+    </div>
+
+
+
+    <div class="menu-item">
+
+      <div class="menu-number">
+        五
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          チャーシュー丼
+        </div>
+
+        <span class="menu-detail">
+          秘伝のタレで仕上げた自家製チャーシュー。
+        </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥450
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="secret">
+
+    <div class="secret-title">
+      TODAY'S SPECIAL
+    </div>
+
+    <h3>
+      本日の限定らーめん
+    </h3>
+
+    <p>
+      内容は店頭・SNSにてお知らせしています。
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CHEF
+========================================================= -->
+
+<section
+  class="chef"
+  id="chef"
+>
+
+  <div class="chef-grid">
+
+
+    <div class="chef-photo"></div>
+
+
+    <div>
+
+      <div class="section-label">
+        03 / MASTER
+      </div>
+
+
+      <h2>
+        一杯のためなら、<br>
+        手間を惜しまない。
+      </h2>
+
+
+      <div class="chef-copy">
+
+        <p>
+
+          スープは毎朝、
+          店主自ら火加減を見ながら
+          丁寧に仕込んでいます。
+
+        </p>
+
+
+        <p>
+
+          麺、スープ、具材。
+
+          どれか一つだけではなく、
+          すべてが揃って初めて
+          「HOMICの一杯」になる。
+
+        </p>
+
+
+        <p>
+
+          今日も一杯一杯、
+          心を込めて作ります。
+
+        </p>
+
+      </div>
+
+
+      <div class="chef-sign">
+        店主　HOMIC
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESERVATION / CTA
+========================================================= -->
+
+<section
+  class="reserve"
+  id="reserve"
+>
+
+  <div class="reserve-content">
+
+    <div class="section-label">
+      COME AND TASTE
+    </div>
+
+
+    <h2>
+      今日も、<br>
+      最高の一杯を。
+    </h2>
+
+
+    <p>
+      営業時間・店舗情報はこちら。
+    </p>
+
+
+    <a
+      href="#access"
+      class="button button-red"
+    >
+      店舗情報を見る
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACCESS
+========================================================= -->
+
+<section
+  class="access"
+  id="access"
+>
+
+  <div class="section-label">
+    04 / ACCESS
+  </div>
+
+
+  <div class="access-grid">
+
+
+    <div class="access-info">
+
+      <h2>
+        HOMIC RAMEN
+      </h2>
+
+
+      <div class="access-row">
+
+        <strong>
+          ADDRESS
+        </strong>
+
+        <span>
+          愛媛県〇〇市〇〇町1-2-3
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          OPEN
+        </strong>
+
+        <span>
+          11:00 - 15:00<br>
+          17:00 - 21:00
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          CLOSED
+        </strong>
+
+        <span>
+          火曜日
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          TEL
+        </strong>
+
+        <span>
+          000-0000-0000
+        </span>
+
+      </div>
+
+
+      <div class="access-row">
+
+        <strong>
+          PARKING
+        </strong>
+
+        <span>
+          10台
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="map">
+      MAP
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <div class="footer-logo">
+
+        HOMIC
+        <span>RAMEN</span>
+
+      </div>
+
+
+      <div class="footer-sub">
+        一杯に、魂を。
+      </div>
+
+    </div>
+
+
+    <div class="footer-copy">
+      © 2026 HOMIC RAMEN
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const items =
+document.querySelectorAll(
+  ".story-text, .menu-item, .secret, .chef-copy, .chef-photo, .access-info"
+);
+
+
+const observer =
+new IntersectionObserver(
+  (entries)=>{
+
+    entries.forEach(
+      (entry)=>{
+
+        if(entry.isIntersecting){
+
+          entry.target.style.opacity="1";
+
+          entry.target.style.transform=
+            "translateY(0)";
+
+        }
+
+      }
+    );
+
+  },
+  {
+    threshold:.1
+  }
+);
+
+
+items.forEach(
+  (item)=>{
+
+    item.style.opacity="0";
+
+    item.style.transform=
+      "translateY(25px)";
+
+    item.style.transition=
+      "opacity .7s ease, transform .7s ease";
+
+    observer.observe(item);
+
+  }
+);
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+window.addEventListener(
+  "scroll",
+  ()=>{
+
+    const header =
+      document.querySelector(".header");
+
+
+    if(window.scrollY>30){
+
+      header.style.boxShadow=
+        "0 10px 35px rgba(0,0,0,.35)";
+
+    }else{
+
+      header.style.boxShadow=
+        "none";
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+</html>
