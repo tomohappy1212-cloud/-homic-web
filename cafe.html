@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>HOMIC CAFE</title>
+
+<meta
+  name="description"
+  content="HOMICが提案するカフェホームページのサンプルです。"
+>
+
+<style>
+
+/* ==================================================
+   HOMIC CAFE TEMPLATE
+   1ファイル完結型テンプレート
+
+   ★ 案件時に変更する場所
+   ① 店名
+   ② キャッチコピー
+   ③ 写真
+   ④ メニュー
+   ⑤ 料金
+   ⑥ 営業時間
+   ⑦ 住所
+   ⑧ 予約先
+
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  color: #171717;
+  background: #f8f6f1;
+
+  line-height: 1.8;
+
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* ==================================================
+   COLOR
+================================================== */
+
+:root {
+
+  --brown: #7f3028;
+  --brown-dark: #5f241f;
+
+  --cream: #f8f6f1;
+  --cream-dark: #eee9df;
+
+  --black: #171717;
+  --gray: #737373;
+
+  --white: #ffffff;
+
+  --line: #ded9cf;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 76px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background:
+    rgba(248,246,241,.94);
+
+  backdrop-filter:
+    blur(15px);
+
+  border-bottom:
+    1px solid rgba(0,0,0,.07);
+
+  z-index: 1000;
+}
+
+.logo {
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--brown);
+}
+
+.nav {
+
+  display: flex;
+
+  gap: 28px;
+
+  align-items: center;
+}
+
+.nav a {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: .25s;
+}
+
+.nav a:hover {
+  color: var(--brown);
+}
+
+.nav-button {
+
+  padding:
+    10px 18px;
+
+  color: #fff;
+
+  background:
+    var(--brown);
+
+  border-radius:
+    100px;
+}
+
+.nav-button:hover {
+  color: #fff !important;
+
+  background:
+    var(--brown-dark);
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  padding:
+    140px 7%
+    80px;
+
+  background:
+    var(--cream);
+}
+
+.hero-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 50%;
+
+  max-width: 650px;
+}
+
+.hero-small {
+
+  color:
+    var(--brown);
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(55px, 8vw, 100px);
+
+  line-height: 1.02;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 28px;
+}
+
+.hero h1 span {
+  color: var(--brown);
+}
+
+.hero-description {
+
+  color:
+    var(--gray);
+
+  font-size: 15px;
+
+  max-width: 500px;
+
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 53px;
+
+  padding:
+    13px 25px;
+
+  border-radius:
+    100px;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  transition: .25s;
+}
+
+.button:hover {
+  transform:
+    translateY(-3px);
+}
+
+.button-main {
+
+  color: #fff;
+
+  background:
+    var(--brown);
+
+  box-shadow:
+    0 12px 30px
+    rgba(95,36,31,.2);
+}
+
+.button-main:hover {
+  background:
+    var(--brown-dark);
+}
+
+.button-outline {
+
+  color:
+    var(--black);
+
+  border:
+    1px solid #cfc8bb;
+}
+
+.button-outline:hover {
+
+  color: #fff;
+
+  background:
+    var(--black);
+
+  border-color:
+    var(--black);
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+
+  position: absolute;
+
+  right: 4%;
+
+  top: 12%;
+
+  width: 48%;
+
+  height: 76vh;
+
+  overflow: hidden;
+
+  border-radius:
+    0 0 0 180px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #30231f,
+      #8c5a48
+    );
+}
+
+.hero-image::before {
+
+  content: "HOMIC";
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color:
+    rgba(255,255,255,.25);
+
+  font-family: Georgia, serif;
+
+  font-size: 60px;
+
+  font-weight: 700;
+
+  letter-spacing: 8px;
+}
+
+.hero-image::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 20px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.25);
+
+  border-radius:
+    0 0 0 160px;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro {
+
+  padding:
+    120px 7%;
+
+  background:
+    var(--brown);
+
+  color: #fff;
+}
+
+.intro-inner {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.section-label {
+
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 15px;
+
+  opacity: .8;
+}
+
+.intro h2 {
+
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(38px, 6vw, 65px);
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.intro p {
+
+  max-width: 650px;
+
+  margin: auto;
+
+  color:
+    rgba(255,255,255,.82);
+
+  font-size: 14px;
+}
+
+
+/* ==================================================
+   CONCEPT
+================================================== */
+
+.section {
+
+  padding:
+    115px 7%;
+}
+
+.section-header {
+
+  margin-bottom: 55px;
+}
+
+.section-label-dark {
+
+  color:
+    var(--brown);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 12px;
+}
+
+.section-title {
+
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(42px, 6vw, 70px);
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+}
+
+.concept {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.concept-visual {
+
+  min-height: 500px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d2b19c,
+      #604138
+    );
+
+  border-radius:
+    180px 0 0 0;
+}
+
+.concept-visual::after {
+
+  content: "COFFEE";
+
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 30px;
+
+  color:
+    rgba(255,255,255,.7);
+
+  font-family: Georgia, serif;
+
+  font-size: 35px;
+
+  letter-spacing: 5px;
+}
+
+.concept-text h3 {
+
+  font-family: Georgia, serif;
+
+  font-size: 32px;
+
+  line-height: 1.3;
+
+  margin-bottom: 22px;
+}
+
+.concept-text p {
+
+  color:
+    var(--gray);
+
+  font-size: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+/* ==================================================
+   MENU
+================================================== */
+
+.menu-section {
+
+  background:
+    var(--cream-dark);
+}
+
+.menu-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.menu-card {
+
+  padding:
+    35px 30px;
+
+  background:
+    #fff;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:
+    20px;
+
+  transition: .25s;
+}
+
+.menu-card:hover {
+
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 20px 45px
+    rgba(0,0,0,.08);
+}
+
+.menu-card-label {
+
+  color:
+    var(--brown);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 7px;
+}
+
+.menu-card h3 {
+
+  font-family: Georgia, serif;
+
+  font-size: 28px;
+
+  margin-bottom: 25px;
+}
+
+.menu-item {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding:
+    14px 0;
+
+  border-bottom:
+    1px solid #eee;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item strong {
+
+  font-size: 13px;
+}
+
+.menu-item span {
+
+  color:
+    var(--brown);
+
+  font-weight: 900;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.about-content h2 {
+
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(40px, 5vw, 60px);
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.about-content p {
+
+  color:
+    var(--gray);
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+.info-list {
+
+  margin-top: 30px;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.info-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    15px 0;
+
+  border-bottom:
+    1px solid var(--line);
+
+  font-size: 13px;
+}
+
+.info-row strong {
+  color: var(--brown);
+}
+
+.about-visual {
+
+  min-height: 520px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #392822,
+      #a5755f
+    );
+
+  border-radius:
+    0 170px 0 0;
+
+  position: relative;
+}
+
+.about-visual::before {
+
+  content: "HOMIC";
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  color:
+    rgba(255,255,255,.25);
+
+  font-family: Georgia, serif;
+
+  font-size: 55px;
+
+  letter-spacing: 8px;
+}
+
+
+/* ==================================================
+   ACCESS
+================================================== */
+
+.access-section {
+
+  background:
+    var(--navy);
+
+  color: #fff;
+}
+
+.access {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 25px;
+}
+
+.access-info {
+
+  padding: 40px;
+
+  background:
+    #121f43;
+
+  border:
+    1px solid #2b3c67;
+
+  border-radius: 20px;
+}
+
+.access-info h3 {
+
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+
+  margin-bottom: 25px;
+}
+
+.access-info p {
+
+  color:
+    #c4ccdc;
+
+  font-size: 13px;
+
+  margin-bottom: 18px;
+}
+
+.access-info strong {
+  color:
+    #fff;
+}
+
+.map {
+
+  min-height: 360px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    #e8e4dc;
+
+  color:
+    var(--brown);
+
+  border-radius:
+    20px;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  letter-spacing: 3px;
+}
+
+
+/* ==================================================
+   RESERVATION
+================================================== */
+
+.reservation {
+
+  padding:
+    120px 7%;
+
+  text-align: center;
+
+  background:
+    var(--cream);
+}
+
+.reservation-inner {
+
+  max-width: 750px;
+
+  margin: auto;
+}
+
+.reservation h2 {
+
+  font-family: Georgia, serif;
+
+  font-size:
+    clamp(45px, 6vw, 70px);
+
+  line-height: 1.05;
+
+  margin-bottom: 22px;
+}
+
+.reservation p {
+
+  color:
+    var(--gray);
+
+  font-size: 14px;
+
+  margin-bottom: 30px;
+}
+
+.reservation .button {
+
+  min-width: 190px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+  padding:
+    45px 7%;
+
+  color: #fff;
+
+  background:
+    #080f24;
+
+  border-top:
+    5px solid var(--brown);
+}
+
+.footer-inner {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer-logo {
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  letter-spacing: 2px;
+}
+
+.footer-logo span {
+  color:
+    var(--red);
+}
+
+.footer-text {
+
+  color:
+    #8792a8;
+
+  font-size: 11px;
+
+  margin-top: 7px;
+}
+
+.footer-copy {
+
+  color:
+    #66718a;
+
+  font-size: 10px;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 800px) {
+
+  .header {
+
+    height: 62px;
+
+    padding:
+      0 5%;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .nav {
+
+    display: none;
+  }
+
+
+  /* HERO */
+
+  .hero {
+
+    min-height: auto;
+
+    padding:
+      125px 6%
+      70px;
+
+    display: block;
+  }
+
+  .hero-content {
+
+    width: 100%;
+  }
+
+  .hero h1 {
+
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .hero-description {
+
+    font-size: 13px;
+  }
+
+  .hero-image {
+
+    position: relative;
+
+    right: auto;
+
+    top: auto;
+
+    width: 100%;
+
+    height: 400px;
+
+    margin-top: 50px;
+
+    border-radius:
+      0 0 0 100px;
+  }
+
+  .hero-image::after {
+    border-radius:
+      0 0 0 80px;
+  }
+
+
+  /* COMMON */
+
+  .section {
+
+    padding:
+      75px 6%;
+  }
+
+
+  /* CONCEPT */
+
+  .concept {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .concept-visual {
+
+    min-height: 350px;
+
+    border-radius:
+      100px 0 0 0;
+  }
+
+
+  /* MENU */
+
+  .menu-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .about-visual {
+
+    min-height: 380px;
+
+    border-radius:
+      0 100px 0 0;
+  }
+
+
+  /* ACCESS */
+
+  .access {
+
+    grid-template-columns: 1fr;
+  }
+
+  .access-info {
+
+    padding: 30px;
+  }
+
+  .map {
+
+    min-height: 260px;
+  }
+
+
+  /* RESERVATION */
+
+  .reservation {
+
+    padding:
+      80px 6%;
+  }
+
+
+  /* FOOTER */
+
+  .footer-inner {
+
+    display: block;
+  }
+
+  .footer-copy {
+
+    display: block;
+
+    margin-top: 25px;
+  }
+
+}
+
+
+/* ==================================================
+   VERY SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-image {
+    height: 320px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .intro h2 {
+    font-size: 36px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
+<header class="header">
+
+  <!-- ★ 店名変更 -->
+  <a href="#" class="logo">
+    HOM<span>IC</span>
+  </a>
+
+  <nav class="nav">
+
+    <a href="#concept">
+      CONCEPT
+    </a>
+
+    <a href="#menu">
+      MENU
+    </a>
+
+    <a href="#about">
+      ABOUT
+    </a>
+
+    <a href="#access">
+      ACCESS
+    </a>
+
+    <a
+      href="#reservation"
+      class="nav-button"
+    >
+      予約する
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-small">
+      HOMIC CAFE
+    </div>
+
+    <!-- ★ キャッチコピー変更 -->
+    <h1>
+      日常に、<br>
+      <span>少しだけ</span><br>
+      特別な時間を。
+    </h1>
+
+    <p class="hero-description">
+
+      香り高いコーヒーと、
+      ゆっくり流れる時間。
+
+      HOMICは、
+      日常の中に小さな余白を
+      つくるカフェです。
+
+    </p>
+
+    <div class="hero-buttons">
+
+      <a
+        href="#menu"
+        class="button button-main"
+      >
+        メニューを見る
+      </a>
+
+      <a
+        href="#reservation"
+        class="button button-outline"
+      >
+        予約する
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ★ 実案件では画像に変更 -->
+  <div class="hero-image"></div>
+
+</section>
+
+
+
+<!-- ==================================================
+     INTRO
+================================================== -->
+
+<section class="intro">
+
+  <div class="intro-inner">
+
+    <span class="section-label">
+      OUR PHILOSOPHY
+    </span>
+
+    <h2>
+      一杯のコーヒーから、<br>
+      はじまる時間。
+    </h2>
+
+    <p>
+
+      忙しい毎日の中で、
+      少しだけ立ち止まれる場所。
+
+      HOMICでは、
+      一杯一杯丁寧に淹れたコーヒーと
+      心地よい空間をご用意しています。
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CONCEPT
+================================================== -->
+
+<section
+  class="section"
+  id="concept"
+>
+
+  <div class="section-header">
+
+    <div class="section-label-dark">
+      CONCEPT
+    </div>
+
+    <h2 class="section-title">
+      こだわり
+    </h2>
+
+  </div>
+
+
+  <div class="concept">
+
+    <div class="concept-visual"></div>
+
+    <div class="concept-text">
+
+      <h3>
+        「また来たい」と<br>
+        思える場所へ。
+      </h3>
+
+      <p>
+
+        HOMICが大切にしているのは、
+        商品だけではありません。
+
+      </p>
+
+      <p>
+
+        店内に流れる音楽、
+        コーヒーの香り、
+        スタッフとの会話。
+
+        そのすべてを含めて、
+        一つの時間だと考えています。
+
+      </p>
+
+      <p>
+
+        一人でも、
+        大切な人とでも。
+
+        自分らしい時間を
+        過ごしていただける場所を
+        目指しています。
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     MENU
+================================================== -->
+
+<section
+  class="section menu-section"
+  id="menu"
+>
+
+  <div class="section-header">
+
+    <div class="section-label-dark">
+      MENU
+    </div>
+
+    <h2 class="section-title">
+      メニュー
+    </h2>
+
+  </div>
+
+
+  <div class="menu-grid">
+
+
+    <!-- COFFEE -->
+
+    <div class="menu-card">
+
+      <div class="menu-card-label">
+        COFFEE
+      </div>
+
+      <h3>
+        Coffee
+      </h3>
+
+
+      <div class="menu-item">
+
+        <strong>
+          HOMIC ブレンド
+        </strong>
+
+        <span>
+          ¥500
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          アメリカーノ
+        </strong>
+
+        <span>
+          ¥500
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          カフェラテ
+        </strong>
+
+        <span>
+          ¥580
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          カプチーノ
+        </strong>
+
+        <span>
+          ¥580
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- DRINK -->
+
+    <div class="menu-card">
+
+      <div class="menu-card-label">
+        DRINK
+      </div>
+
+      <h3>
+        Drink
+      </h3>
+
+
+      <div class="menu-item">
+
+        <strong>
+          紅茶
+        </strong>
+
+        <span>
+          ¥500
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          アイスティー
+        </strong>
+
+        <span>
+          ¥500
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          自家製レモネード
+        </strong>
+
+        <span>
+          ¥550
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          オレンジジュース
+        </strong>
+
+        <span>
+          ¥450
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- SWEETS -->
+
+    <div class="menu-card">
+
+      <div class="menu-card-label">
+        SWEETS
+      </div>
+
+      <h3>
+        Sweets
+      </h3>
+
+
+      <div class="menu-item">
+
+        <strong>
+          チーズケーキ
+        </strong>
+
+        <span>
+          ¥620
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          ガトーショコラ
+        </strong>
+
+        <span>
+          ¥620
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          プリン
+        </strong>
+
+        <span>
+          ¥550
+        </span>
+
+      </div>
+
+
+      <div class="menu-item">
+
+        <strong>
+          季節のデザート
+        </strong>
+
+        <span>
+          ¥680
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
+
+<section
+  class="section"
+  id="about"
+>
+
+  <div class="about">
+
+    <div class="about-content">
+
+      <div class="section-label-dark">
+        ABOUT
+      </div>
+
+      <h2>
+        HOMICについて
+      </h2>
+
+      <p>
+
+        HOMICは、
+        「日常に小さな特別を」を
+        コンセプトにしたカフェです。
+
+      </p>
+
+      <p>
+
+        一人でゆっくり過ごしたい日も、
+        大切な人と話したい日も。
+
+        それぞれの時間に寄り添う
+        空間をつくっています。
+
+      </p>
+
+
+      <div class="info-list">
+
+
+        <div class="info-row">
+
+          <strong>
+            営業時間
+          </strong>
+
+          <span>
+            10:00 - 19:00
+          </span>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <strong>
+            定休日
+          </strong>
+
+          <span>
+            火曜日
+          </span>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <strong>
+            席数
+          </strong>
+
+          <span>
+            24席
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <!-- ★ 実案件では写真に変更 -->
+
+    <div class="about-visual"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ACCESS
+================================================== -->
+
+<section
+  class="section access-section"
+  id="access"
+>
+
+  <div class="section-header">
+
+    <div class="section-label">
+      ACCESS
+    </div>
+
+    <h2 class="section-title">
+      店舗情報
+    </h2>
+
+  </div>
+
+
+  <div class="access">
+
+
+    <div class="access-info">
+
+      <h3>
+        HOMIC
+      </h3>
+
+
+      <p>
+
+        <strong>
+          ADDRESS
+        </strong><br>
+
+        愛媛県〇〇市〇〇町1-2-3
+
+      </p>
+
+
+      <p>
+
+        <strong>
+          OPEN
+        </strong><br>
+
+        10:00 - 19:00
+
+      </p>
+
+
+      <p>
+
+        <strong>
+          CLOSED
+        </strong><br>
+
+        火曜日
+
+      </p>
+
+
+      <p>
+
+        <strong>
+          TEL
+        </strong><br>
+
+        000-0000-0000
+
+      </p>
+
+    </div>
+
+
+    <!-- ★ 実案件ではGoogle Maps等に変更 -->
+
+    <div class="map">
+
+      MAP
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     RESERVATION
+================================================== -->
+
+<section
+  class="reservation"
+  id="reservation"
+>
+
+  <div class="reservation-inner">
+
+    <div class="section-label-dark">
+      RESERVATION
+    </div>
+
+    <h2>
+      ご予約はこちら
+    </h2>
+
+    <p>
+
+      お席のご予約・お問い合わせは
+      下記よりお願いいたします。
+
+    </p>
+
+
+    <!-- ★ 実案件では予約URLに変更 -->
+
+    <a
+      href="#"
+      class="button button-main"
+      onclick="
+        alert('予約ページへ移動します。');
+        return false;
+      "
+    >
+      予約する
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-logo">
+
+        HOM<span>IC</span>
+
+      </div>
+
+      <div class="footer-text">
+
+        日常に、少しだけ特別な時間を。
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-copy">
+
+      © 2026 HOMIC. All Rights Reserved.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+/* ==================================================
+   HOMIC CAFE
+   JavaScript
+
+   現在はシンプルな構成。
+   案件ごとに必要な機能を追加可能。
+================================================== */
+
+
+/* HEADER SCROLL */
+
+window.addEventListener(
+  "scroll",
+  function () {
+
+    const header =
+      document.querySelector(".header");
+
+    if (window.scrollY > 30) {
+
+      header.style.boxShadow =
+        "0 8px 30px rgba(0,0,0,.08)";
+
+    } else {
+
+      header.style.boxShadow =
+        "none";
+
+    }
+
+  }
+);
+
+
+/* SIMPLE FADE ANIMATION */
+
+const observer =
+  new IntersectionObserver(
+    function(entries) {
+
+      entries.forEach(
+        function(entry) {
+
+          if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+
+            entry.target.style.transform =
+              "translateY(0)";
+
+          }
+
+        }
+      );
+
+    },
+    {
+      threshold: 0.12
+    }
+  );
+
+
+document
+  .querySelectorAll(
+    ".menu-card, .concept-text, .about-content, .access-info, .reservation-inner"
+  )
+  .forEach(
+    function(element) {
+
+      element.style.opacity = "0";
+
+      element.style.transform =
+        "translateY(25px)";
+
+      element.style.transition =
+        "opacity .7s ease, transform .7s ease";
+
+      observer.observe(element);
+
+    }
+  );
+
+</script>
+
+</body>
+</html>
