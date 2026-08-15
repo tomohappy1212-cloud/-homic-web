@@ -3,28 +3,39 @@ const works = [
   {
     category: "CAFE",
     title: "CAFE MELLOW",
-    description: "カフェ・飲食店向けホームページ",
+    description:
+      "カフェ・飲食店向けホームページ",
+
     symbol: "CAFE"
   },
+
 
   {
     category: "RESTAURANT",
     title: "TORIKARA",
-    description: "飲食店向けホームページ",
+    description:
+      "飲食店向けホームページ",
+
     symbol: "FOOD"
   },
+
 
   {
     category: "BEAUTY",
     title: "CUT BASE",
-    description: "美容室・サロン向けホームページ",
+    description:
+      "美容室・サロン向けホームページ",
+
     symbol: "BEAUTY"
   },
+
 
   {
     category: "KITCHEN CAR",
     title: "FOOD TRUCK",
-    description: "キッチンカー向けホームページ",
+    description:
+      "キッチンカー向けホームページ",
+
     symbol: "TRUCK"
   }
 
@@ -32,35 +43,48 @@ const works = [
 
 
 const container =
-  document.getElementById("works-container");
+  document.getElementById(
+    "works-container"
+  );
 
 
-works.forEach((work) => {
+if (container) {
 
-  const element = document.createElement("article");
+  works.forEach((work) => {
 
-  element.className = "work";
+    const element =
+      document.createElement("article");
 
-  element.innerHTML = `
+    element.className = "work";
 
-    <div class="work-image">
-      ${work.symbol}
-    </div>
 
-    <div class="work-info">
+    element.innerHTML = `
 
-      <small>${work.category}</small>
+      <div class="work-image">
+        ${work.symbol}
+      </div>
 
-      <h3>${work.title}</h3>
+      <div class="work-info">
 
-      <p>
-        ${work.description}
-      </p>
+        <small>
+          ${work.category}
+        </small>
 
-    </div>
+        <h3>
+          ${work.title}
+        </h3>
 
-  `;
+        <p>
+          ${work.description}
+        </p>
 
-  container.appendChild(element);
+      </div>
 
-});
+    `;
+
+
+    container.appendChild(element);
+
+  });
+
+}
