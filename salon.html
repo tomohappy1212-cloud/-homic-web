@@ -4,29 +4,725 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HOMIC SALON</title>
+<title>HOMIC BEAUTY SALON</title>
 
 <meta name="description"
-content="HOMICが提案する美容・サロン向けホームページのサンプルです。">
+content="HOMIC BEAUTY SALON。あなたの魅力を引き出す、美容室のホームページサンプル。">
 
 <style>
 
-/* =====================================================
-   HOMIC SALON TEMPLATE
-   1ファイル完結型
-===================================================== */
+/* =========================================================
+   HOMIC BEAUTY SALON
+   Luxury Beauty Template
+========================================================= */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --black:#11100f;
+  --black2:#1a1816;
+  --gold:#c6a15b;
+  --gold-light:#e0c88e;
+  --ivory:#f5f0e7;
+  --cream:#ebe3d5;
+  --white:#ffffff;
+  --gray:#aaa39a;
+  --line:rgba(198,161,91,.28);
 }
 
-html {
-  scroll-behavior: smooth;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--black);
+  color:var(--ivory);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+.gold{
+  color:var(--gold);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:82px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 6%;
+
+  z-index:1000;
+
+  background:rgba(17,16,15,.82);
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid var(--line);
+
+  transition:.3s;
+}
+
+.logo{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:25px;
+  letter-spacing:5px;
+  font-weight:bold;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:30px;
+}
+
+.nav a{
+  font-size:10px;
+  letter-spacing:2px;
+  color:#ddd6ca;
+  transition:.25s;
+}
+
+.nav a:hover{
+  color:var(--gold-light);
+}
+
+.reserve-nav{
+  border:1px solid var(--gold);
+  padding:10px 21px;
+  color:var(--gold)!important;
+}
+
+.reserve-nav:hover{
+  background:var(--gold);
+  color:var(--black)!important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:100vh;
+  padding-top:82px;
+
+  display:grid;
+  grid-template-columns:52% 48%;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(198,161,91,.12),
+      transparent 35%
+    ),
+    var(--black);
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:650px;
+  height:650px;
+
+  border:1px solid rgba(198,161,91,.12);
+  border-radius:50%;
+
+  right:-280px;
+  bottom:-250px;
+}
+
+.hero-content{
+  display:flex;
+  align-items:center;
+
+  padding:70px 8%;
+
+  position:relative;
+  z-index:2;
+}
+
+.hero-small{
+  color:var(--gold);
+
+  font-size:10px;
+  letter-spacing:5px;
+  font-weight:bold;
+
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+
+  font-weight:normal;
+
+  font-size:
+    clamp(48px,6.5vw,86px);
+
+  line-height:1.08;
+
+  letter-spacing:-3px;
+
+  margin-bottom:28px;
+}
+
+.hero h1 em{
+  color:var(--gold-light);
+  font-style:normal;
+}
+
+.hero-description{
+  max-width:490px;
+
+  color:var(--gray);
+
+  font-size:13px;
+
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.button{
+  min-height:52px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:13px 28px;
+
+  font-size:11px;
+  letter-spacing:2px;
+
+  transition:.3s;
+}
+
+.button-gold{
+  background:var(--gold);
+  color:var(--black);
+}
+
+.button-gold:hover{
+  background:var(--gold-light);
+  transform:translateY(-3px);
+}
+
+.button-line{
+  border:1px solid rgba(245,240,231,.35);
+  color:var(--ivory);
+}
+
+.button-line:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+
+/* =========================================================
+   HAIR IRON VISUAL
+========================================================= */
+
+.hero-visual{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:620px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #24201b,
+      #0c0b0a
+    );
+
+  overflow:hidden;
+}
+
+.hero-visual::before{
+  content:"BEAUTY";
+
+  position:absolute;
+
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(70px,10vw,145px);
+
+  letter-spacing:15px;
+
+  color:rgba(198,161,91,.035);
+
+  transform:rotate(-90deg);
+
+  white-space:nowrap;
+}
+
+.visual-circle{
+  position:absolute;
+
+  width:450px;
+  height:450px;
+
+  border:1px solid var(--line);
+
+  border-radius:50%;
+}
+
+.visual-circle::before{
+  content:"";
+
+  position:absolute;
+
+  inset:35px;
+
+  border:1px solid rgba(198,161,91,.15);
+
+  border-radius:50%;
+}
+
+
+/* HAIR IRON */
+
+.hair-iron{
+  position:relative;
+
+  width:280px;
+  height:390px;
+
+  transform:rotate(-23deg);
+
+  filter:
+    drop-shadow(
+      20px 25px 30px
+      rgba(0,0,0,.65)
+    );
+
+  z-index:3;
+}
+
+.iron-top{
+  position:absolute;
+
+  top:5px;
+  left:88px;
+
+  width:105px;
+  height:210px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #161412,
+      #3a332b,
+      #151311
+    );
+
+  border-radius:
+    55px 55px 18px 18px;
+
+  border:1px solid #6c5a3e;
+}
+
+.iron-top::after{
+  content:"";
+
+  position:absolute;
+
+  top:20px;
+  left:28px;
+
+  width:48px;
+  height:155px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080706,
+      #2d2822,
+      #080706
+    );
+
+  border-radius:30px;
+}
+
+.iron-bottom{
+  position:absolute;
+
+  top:135px;
+  left:88px;
+
+  width:105px;
+  height:225px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #141210,
+      #353027,
+      #12100e
+    );
+
+  border-radius:
+    18px 18px 55px 55px;
+
+  border:1px solid #6c5a3e;
+}
+
+.iron-bottom::after{
+  content:"";
+
+  position:absolute;
+
+  top:30px;
+  left:28px;
+
+  width:48px;
+  height:150px;
+
+  border-radius:25px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080706,
+      #28231e,
+      #080706
+    );
+}
+
+.iron-joint{
+  position:absolute;
+
+  top:185px;
+  left:69px;
+
+  width:145px;
+  height:24px;
+
+  background:var(--gold);
+
+  border-radius:20px;
+
+  box-shadow:
+    0 0 20px
+    rgba(198,161,91,.25);
+
+  z-index:4;
+}
+
+.iron-light{
+  position:absolute;
+
+  top:192px;
+  left:110px;
+
+  width:62px;
+  height:4px;
+
+  background:var(--gold-light);
+
+  border-radius:10px;
+
+  z-index:5;
+}
+
+
+/* =========================================================
+   GOLD LINE
+========================================================= */
+
+.gold-line{
+  width:100%;
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+  padding:120px 7%;
+
+  text-align:center;
+
+  background:var(--ivory);
+
+  color:var(--black);
+}
+
+.section-label{
+  font-size:9px;
+  letter-spacing:5px;
+  color:var(--gold);
+
+  font-weight:bold;
+
+  margin-bottom:15px;
+}
+
+.intro h2{
+  font-family:Georgia,serif;
+
+  font-weight:normal;
+
+  font-size:
+    clamp(38px,5vw,67px);
+
+  line-height:1.2;
+
+  margin-bottom:28px;
+}
+
+.intro p{
+  max-width:650px;
+
+  margin:auto;
+
+  color:#777;
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   CONCEPT
+========================================================= */
+
+.section{
+  padding:120px 7%;
+}
+
+.section-title{
+  font-family:Georgia,serif;
+
+  font-size:
+    clamp(43px,6vw,75px);
+
+  font-weight:normal;
+
+  line-height:1;
+
+  margin-bottom:60px;
+}
+
+.concept{
+  display:grid;
+
+  grid-template-columns:43% 57%;
+
+  align-items:center;
+
+  gap:80px;
+}
+
+.concept-visual{
+  min-height:550px;
+
+  position:relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #332c25,
+      #11100f
+    );
+
+  border:1px solid var(--line);
+
+  overflow:hidden;
+}
+
+.concept-visual::before{
+  content:"01";
+
+  position:absolute;
+
+  right:30px;
+  top:20px;
+
+  font-family:Georgia,serif;
+
+  font-size:120px;
+
+  color:rgba(198,161,91,.08);
+}
+
+.concept-visual::after{
+  content:"YOUR STYLE";
+
+  position:absolute;
+
+  bottom:35px;
+  left:35px;
+
+  font-family:Georgia,serif;
+
+  font-size:28px;
+
+  letter-spacing:5px;
+
+  color:var(--gold);
+}
+
+.concept-text h3{
+  font-family:Georgia,serif;
+
+  font-weight:normal;
+
+  font-size:
+    clamp(31px,4vw,52px);
+
+  line-height:1.25;
+
+  margin-bottom:30px;
+}
+
+.concept-text p{
+  color:var(--gray);
+
+  font-size:13px;
+
+  margin-bottom:20px;
+
+  max-width:600px;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-section{
+  background:#171513;
+
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.menu-heading{
+  display:flex;
+
+  align-items:end;
+  justify-content:space-between;
+
+  margin-bottom:60px;
+}
+
+.menu-heading .section-title{
+  margin-bottom:0;
+}
+
+.menu-note{
+  color:var(--gray);
+
+  font-size:11px;
+
+  max-width:230px;
+}
+
+.menu-list{
+  border-top:1px solid var(--line);
+}
+
+.menu-row{
+  display:grid;
+
+  grid-template-columns:80px 1fr auto;
+
+  gap:30px;
+
+  align-items:center;
+
+  padding:25px 0;
+
+  border-bottom:1px solid var(--line);
+
+  transition:.25s;
+}
+
+.menu-row:hover{
+  padding-left:15px;
+  padding-right:15px;
+
+  background:rgba(198,161,91,.04);
+}
+
+.menu-number{
+  color:var(--gold);
+
+  font-family:Georgia,serif;
+
+  font-size:17px;
+}
+
+.menu-name{
+  font-family:Georgia,serif;
+
+  font-size:23px;
+}
+
+.menu-detail{
+  display:block;
+
+  color:var(--gray);
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -34,901 +730,419 @@ body {
     Arial,
     sans-serif;
 
-  color: #222;
-  background: #f7f5f2;
-  line-height: 1.8;
-  overflow-x: hidden;
+  font-size:10px;
+
+  margin-top:3px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+.menu-price{
+  color:var(--gold-light);
 
-img {
-  width: 100%;
-  display: block;
-}
+  font-size:15px;
 
-:root {
-  --brown: #7f3028;
-  --brown-dark: #5f241f;
-
-  --navy: #101a35;
-
-  --cream: #f7f5f2;
-  --cream-dark: #ebe7e1;
-
-  --white: #ffffff;
-
-  --gray: #777;
-  --line: #ddd8d1;
+  font-weight:bold;
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* =========================================================
+   STAFF
+========================================================= */
 
-.header {
-  position: fixed;
+.staff-section{
+  background:var(--ivory);
 
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 74px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 6%;
-
-  background: rgba(255,255,255,.94);
-
-  backdrop-filter: blur(15px);
-
-  border-bottom: 1px solid rgba(0,0,0,.06);
-
-  z-index: 1000;
+  color:var(--black);
 }
 
-.logo {
-  font-family: Georgia, serif;
-
-  font-size: 25px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
+.staff-section .section-label{
+  color:#9a7438;
 }
 
-.logo span {
-  color: var(--brown);
-}
-
-.nav {
-  display: flex;
-
-  align-items: center;
-
-  gap: 27px;
-}
-
-.nav a {
-  font-size: 11px;
-
-  font-weight: 800;
-
-  transition: .25s;
-}
-
-.nav a:hover {
-  color: var(--brown);
-}
-
-.nav-reserve {
-  color: #fff !important;
-
-  background: var(--brown);
-
-  padding: 10px 19px;
-
-  border-radius: 100px;
-}
-
-.nav-reserve:hover {
-  background: var(--brown-dark);
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-  min-height: 100vh;
-
-  display: grid;
-
-  grid-template-columns: 45% 55%;
-
-  padding-top: 74px;
-
-  background: var(--cream);
-}
-
-.hero-content {
-  display: flex;
-
-  align-items: center;
-
-  padding: 70px 8%;
-
-  position: relative;
-
-  z-index: 2;
-}
-
-.hero-small {
-  color: var(--brown);
-
-  font-size: 10px;
-
-  font-weight: 900;
-
-  letter-spacing: 4px;
-
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-family: Georgia, serif;
-
-  font-size:
-    clamp(48px, 6vw, 80px);
-
-  line-height: 1.05;
-
-  letter-spacing: -3px;
-
-  margin-bottom: 25px;
-}
-
-.hero h1 span {
-  color: var(--brown);
-}
-
-.hero-description {
-  color: var(--gray);
-
-  font-size: 14px;
-
-  max-width: 450px;
-
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-
-  gap: 10px;
-
-  flex-wrap: wrap;
-}
-
-.button {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  min-height: 52px;
-
-  padding: 13px 25px;
-
-  border-radius: 100px;
-
-  font-size: 12px;
-
-  font-weight: 900;
-
-  transition: .25s;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-}
-
-.button-main {
-  color: #fff;
-
-  background: var(--brown);
-
-  box-shadow:
-    0 12px 30px
-    rgba(95,36,31,.2);
-}
-
-.button-main:hover {
-  background: var(--brown-dark);
-}
-
-.button-outline {
-  border: 1px solid #ccc5bd;
-
-  color: #222;
-}
-
-.button-outline:hover {
-  color: #fff;
-
-  background: #222;
-
-  border-color: #222;
-}
-
-
-/* HERO VISUAL */
-
-.hero-visual {
-  position: relative;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d6c5b7,
-      #60473e
-    );
-}
-
-.hero-visual::before {
-  content: "HOMIC";
-
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color:
-    rgba(255,255,255,.28);
-
-  font-family: Georgia, serif;
-
-  font-size: 70px;
-
-  letter-spacing: 8px;
-}
-
-.hero-visual::after {
-  content: "";
-
-  position: absolute;
-
-  width: 70%;
-
-  height: 70%;
-
-  right: -15%;
-
-  bottom: -15%;
-
-  border-radius: 50%;
-
-  border:
-    1px solid
-    rgba(255,255,255,.4);
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.intro {
-  padding:
-    100px 7%;
-
-  color: #fff;
-
-  background: var(--navy);
-
-  text-align: center;
-}
-
-.intro-inner {
-  max-width: 850px;
-
-  margin: auto;
-}
-
-.label {
-  font-size: 10px;
-
-  letter-spacing: 4px;
-
-  font-weight: 900;
-
-  color: var(--brown);
-
-  margin-bottom: 15px;
-}
-
-.intro .label {
-  color: #b9796f;
-}
-
-.intro h2 {
-  font-family: Georgia, serif;
-
-  font-size:
-    clamp(38px, 5vw, 65px);
-
-  line-height: 1.1;
-
-  margin-bottom: 25px;
-}
-
-.intro p {
-  color: #c8cedc;
-
-  font-size: 14px;
-
-  max-width: 650px;
-
-  margin: auto;
-}
-
-
-/* =====================================================
-   COMMON SECTION
-===================================================== */
-
-.section {
-  padding:
-    110px 7%;
-}
-
-.section-title {
-  font-family: Georgia, serif;
-
-  font-size:
-    clamp(40px, 5vw, 68px);
-
-  line-height: 1.05;
-
-  letter-spacing: -3px;
-
-  margin-bottom: 50px;
-}
-
-
-/* =====================================================
-   CONCEPT
-===================================================== */
-
-.concept {
-  display: grid;
+.staff-grid{
+  display:grid;
 
   grid-template-columns:
-    1fr 1fr;
+    repeat(3,1fr);
 
-  gap: 70px;
-
-  align-items: center;
+  gap:18px;
 }
 
-.concept-image {
-  min-height: 520px;
+.staff-card{
+  background:#fff;
 
-  position: relative;
+  border:1px solid #ded6c8;
 
-  overflow: hidden;
+  position:relative;
+
+  overflow:hidden;
+}
+
+.staff-photo{
+  height:360px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
   background:
     linear-gradient(
       145deg,
-      #eee5dc,
-      #80665b
-    );
-
-  border-radius:
-    0 150px 0 0;
-}
-
-.concept-image::before {
-  content: "STYLE";
-
-  position: absolute;
-
-  left: 35px;
-
-  bottom: 35px;
-
-  color:
-    rgba(255,255,255,.75);
-
-  font-family: Georgia, serif;
-
-  font-size: 35px;
-
-  letter-spacing: 5px;
-}
-
-.concept-text h3 {
-  font-family: Georgia, serif;
-
-  font-size: 34px;
-
-  line-height: 1.3;
-
-  margin-bottom: 23px;
-}
-
-.concept-text p {
-  color: var(--gray);
-
-  font-size: 14px;
-
-  margin-bottom: 18px;
-}
-
-
-/* =====================================================
-   MENU
-===================================================== */
-
-.menu-section {
-  background: var(--cream-dark);
-}
-
-.menu-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 18px;
-}
-
-.menu-card {
-  padding: 32px 28px;
-
-  background: #fff;
-
-  border:
-    1px solid var(--line);
-
-  border-radius: 20px;
-
-  transition: .25s;
-}
-
-.menu-card:hover {
-  transform:
-    translateY(-6px);
-
-  box-shadow:
-    0 20px 45px
-    rgba(0,0,0,.08);
-}
-
-.menu-label {
-  color: var(--brown);
-
-  font-size: 10px;
-
-  letter-spacing: 3px;
-
-  font-weight: 900;
-
-  margin-bottom: 6px;
-}
-
-.menu-card h3 {
-  font-family: Georgia, serif;
-
-  font-size: 28px;
-
-  margin-bottom: 22px;
-}
-
-.menu-item {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 15px;
-
-  padding: 13px 0;
-
-  border-bottom:
-    1px solid #eee;
-
-  font-size: 13px;
-}
-
-.menu-item:last-child {
-  border-bottom: none;
-}
-
-.menu-item span {
-  color: var(--brown);
-
-  font-weight: 900;
-
-  white-space: nowrap;
-}
-
-
-/* =====================================================
-   STAFF
-===================================================== */
-
-.staff-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 20px;
-}
-
-.staff-card {
-  background: #fff;
-
-  border:
-    1px solid var(--line);
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
-  transition: .25s;
-}
-
-.staff-card:hover {
-  transform:
-    translateY(-6px);
-
-  box-shadow:
-    0 20px 45px
-    rgba(0,0,0,.08);
-}
-
-.staff-photo {
-  height: 300px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d8c7ba,
-      #73584d
+      #ddd0be,
+      #675847
     );
 
   color:
-    rgba(255,255,255,.65);
+    rgba(255,255,255,.7);
 
-  font-family: Georgia, serif;
+  font-family:Georgia,serif;
 
-  font-size: 27px;
+  font-size:28px;
 
-  letter-spacing: 3px;
+  letter-spacing:4px;
 }
 
-.staff-info {
-  padding: 22px;
+.staff-info{
+  padding:25px;
 }
 
-.staff-role {
-  color: var(--brown);
+.staff-role{
+  color:#9a7438;
 
-  font-size: 10px;
+  font-size:9px;
 
-  letter-spacing: 2px;
+  letter-spacing:3px;
 
-  font-weight: 900;
+  font-weight:bold;
 }
 
-.staff-info h3 {
-  font-family: Georgia, serif;
+.staff-info h3{
+  font-family:Georgia,serif;
 
-  font-size: 23px;
+  font-size:28px;
 
-  margin: 3px 0 8px;
+  font-weight:normal;
+
+  margin:3px 0 8px;
 }
 
-.staff-info p {
-  color: var(--gray);
+.staff-info p{
+  color:#777;
 
-  font-size: 12px;
+  font-size:11px;
 }
 
 
-/* =====================================================
-   RESERVATION BANNER
-===================================================== */
+/* =========================================================
+   RESERVATION
+========================================================= */
 
-.reserve-banner {
-  padding:
-    100px 7%;
+.reservation{
+  padding:140px 7%;
 
-  color: #fff;
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
 
   background:
-    var(--brown);
-
-  text-align: center;
+    radial-gradient(
+      circle at center,
+      rgba(198,161,91,.16),
+      transparent 45%
+    ),
+    var(--black);
 }
 
-.reserve-banner h2 {
-  font-family: Georgia, serif;
+.reservation::before{
+  content:"RESERVE";
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  font-family:Georgia,serif;
 
   font-size:
-    clamp(42px, 6vw, 70px);
+    clamp(70px,14vw,190px);
 
-  line-height: 1.05;
+  color:rgba(198,161,91,.035);
 
-  margin-bottom: 22px;
+  white-space:nowrap;
 }
 
-.reserve-banner p {
-  color:
-    rgba(255,255,255,.8);
-
-  font-size: 14px;
-
-  margin-bottom: 28px;
+.reservation-inner{
+  position:relative;
+  z-index:2;
 }
 
-.reserve-white {
-  color: var(--brown);
+.reservation h2{
+  font-family:Georgia,serif;
 
-  background: #fff;
+  font-weight:normal;
+
+  font-size:
+    clamp(42px,6vw,75px);
+
+  line-height:1.1;
+
+  margin-bottom:25px;
 }
 
-.reserve-white:hover {
-  background: var(--navy);
+.reservation p{
+  color:var(--gray);
 
-  color: #fff;
+  font-size:13px;
+
+  margin-bottom:35px;
 }
 
 
-/* =====================================================
+/* =========================================================
    ACCESS
-===================================================== */
+========================================================= */
 
-.access-section {
-  background: var(--cream);
+.access-section{
+  background:#151311;
 }
 
-.access {
-  display: grid;
+.access{
+  display:grid;
 
   grid-template-columns:
     1fr 1fr;
 
-  gap: 25px;
+  gap:20px;
 }
 
-.access-info {
-  padding: 38px;
+.access-info{
+  padding:40px;
 
-  background: #fff;
+  border:1px solid var(--line);
 
-  border:
-    1px solid var(--line);
-
-  border-radius: 20px;
+  background:#1b1917;
 }
 
-.access-info h3 {
-  font-family: Georgia, serif;
+.access-info h3{
+  font-family:Georgia,serif;
 
-  font-size: 30px;
+  font-size:30px;
 
-  margin-bottom: 25px;
+  font-weight:normal;
+
+  margin-bottom:28px;
 }
 
-.access-info p {
-  color: var(--gray);
+.access-info p{
+  color:var(--gray);
 
-  font-size: 13px;
+  font-size:12px;
 
-  margin-bottom: 17px;
+  margin-bottom:18px;
 }
 
-.access-info strong {
-  color: var(--brown);
+.access-info strong{
+  display:inline-block;
+
+  min-width:85px;
+
+  color:var(--gold);
+
+  font-size:9px;
+
+  letter-spacing:2px;
 }
 
-.map {
-  min-height: 350px;
+.map{
+  min-height:360px;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
   background:
-    #e5e0d8;
+    linear-gradient(
+      135deg,
+      #25211c,
+      #11100f
+    );
 
-  color: var(--brown);
+  border:1px solid var(--line);
 
-  border-radius: 20px;
+  color:var(--gold);
 
-  font-family: Georgia, serif;
+  font-family:Georgia,serif;
 
-  font-size: 25px;
+  font-size:28px;
 
-  letter-spacing: 3px;
+  letter-spacing:6px;
 }
 
 
-/* =====================================================
+/* =========================================================
    FOOTER
-===================================================== */
+========================================================= */
 
-footer {
-  padding:
-    45px 7%;
+footer{
+  padding:55px 7%;
 
-  color: #fff;
+  background:#0a0908;
 
-  background:
-    #080f24;
-
-  border-top:
-    5px solid var(--brown);
+  border-top:1px solid var(--line);
 }
 
-.footer-inner {
-  display: flex;
+.footer-inner{
+  display:flex;
 
-  align-items: flex-start;
+  align-items:flex-end;
+  justify-content:space-between;
 
-  justify-content: space-between;
-
-  gap: 30px;
+  gap:30px;
 }
 
-.footer-logo {
-  font-family: Georgia, serif;
+.footer-logo{
+  font-family:Georgia,serif;
 
-  font-size: 25px;
+  font-size:28px;
 
-  letter-spacing: 2px;
+  letter-spacing:5px;
 }
 
-.footer-logo span {
-  color: var(--brown);
+.footer-logo span{
+  color:var(--gold);
 }
 
-.footer-description {
-  color: #8792a8;
+.footer-text{
+  color:#6f6961;
 
-  font-size: 11px;
+  font-size:10px;
 
-  margin-top: 6px;
+  margin-top:5px;
 }
 
-.footer-copy {
-  color: #66718a;
+.footer-copy{
+  color:#5e5851;
 
-  font-size: 10px;
+  font-size:9px;
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
-@media (max-width: 800px) {
+@media(max-width:800px){
 
-  .header {
-    height: 62px;
-
-    padding: 0 5%;
+  .header{
+    height:65px;
+    padding:0 5%;
   }
 
-  .nav {
-    display: none;
+  .nav{
+    display:none;
   }
 
-  .hero {
-    display: block;
-
-    padding-top: 62px;
+  .hero{
+    display:block;
+    padding-top:65px;
   }
 
-  .hero-content {
-    padding:
-      75px 6%
-      60px;
+  .hero-content{
+    padding:80px 7% 65px;
   }
 
-  .hero h1 {
-    font-size: 48px;
-
-    letter-spacing: -3px;
+  .hero h1{
+    font-size:50px;
   }
 
-  .hero-visual {
-    height: 430px;
+  .hero-visual{
+    min-height:500px;
   }
 
-  .section {
-    padding:
-      75px 6%;
+  .visual-circle{
+    width:330px;
+    height:330px;
   }
 
-  .concept {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
+  .hair-iron{
+    transform:
+      rotate(-23deg)
+      scale(.82);
   }
 
-  .concept-image {
-    min-height: 350px;
-
-    border-radius:
-      0 100px 0 0;
+  .section{
+    padding:85px 6%;
   }
 
-  .menu-grid {
-    grid-template-columns: 1fr;
-
-    gap: 12px;
+  .intro{
+    padding:85px 6%;
   }
 
-  .staff-grid {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
+  .concept{
+    grid-template-columns:1fr;
+    gap:40px;
   }
 
-  .staff-photo {
-    height: 330px;
+  .concept-visual{
+    min-height:390px;
   }
 
-  .access {
-    grid-template-columns: 1fr;
+  .menu-heading{
+    display:block;
   }
 
-  .map {
-    min-height: 260px;
+  .menu-note{
+    margin-top:20px;
   }
 
-  .footer-inner {
-    display: block;
+  .menu-row{
+    grid-template-columns:45px 1fr;
+    gap:12px;
+    padding:20px 0;
   }
 
-  .footer-copy {
-    display: block;
-
-    margin-top: 25px;
+  .menu-price{
+    grid-column:2;
   }
 
-  .button {
-    width: 100%;
+  .staff-grid{
+    grid-template-columns:1fr;
+  }
+
+  .staff-photo{
+    height:390px;
+  }
+
+  .access{
+    grid-template-columns:1fr;
+  }
+
+  .map{
+    min-height:250px;
+  }
+
+  .reservation{
+    padding:100px 6%;
+  }
+
+  .footer-inner{
+    display:block;
+  }
+
+  .footer-copy{
+    margin-top:25px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .button{
+    width:100%;
   }
 }
 
@@ -939,9 +1153,9 @@ footer {
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
 <header class="header">
 
@@ -951,27 +1165,19 @@ footer {
 
   <nav class="nav">
 
-    <a href="#concept">
-      CONCEPT
-    </a>
+    <a href="#concept">CONCEPT</a>
 
-    <a href="#menu">
-      MENU
-    </a>
+    <a href="#menu">MENU</a>
 
-    <a href="#staff">
-      STAFF
-    </a>
+    <a href="#staff">STYLIST</a>
 
-    <a href="#access">
-      ACCESS
-    </a>
+    <a href="#access">ACCESS</a>
 
     <a
       href="#reservation"
-      class="nav-reserve"
+      class="reserve-nav"
     >
-      予約する
+      RESERVATION
     </a>
 
   </nav>
@@ -980,9 +1186,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      HERO
-===================================================== -->
+========================================================= -->
 
 <section class="hero">
 
@@ -991,36 +1197,37 @@ footer {
     <div>
 
       <div class="hero-small">
-        HOMIC SALON
+        HOMIC BEAUTY SALON
       </div>
 
       <h1>
-        あなたらしさを、<br>
-        <span>もっと美しく。</span>
+        美しさを、<br>
+        <em>デザインする。</em>
       </h1>
 
       <p class="hero-description">
 
-        一人ひとりの魅力に寄り添い、
-        毎日が少し楽しくなる
-        ヘアスタイルをご提案します。
+        髪質、骨格、ライフスタイル。
+        一人ひとりの個性に合わせた
+        スタイルをご提案します。
+        いつもの自分を、少し特別に。
 
       </p>
 
       <div class="hero-buttons">
 
         <a
-          href="#menu"
-          class="button button-main"
+          href="#reservation"
+          class="button button-gold"
         >
-          MENUを見る
+          予約する
         </a>
 
         <a
-          href="#reservation"
-          class="button button-outline"
+          href="#menu"
+          class="button button-line"
         >
-          予約する
+          MENUを見る
         </a>
 
       </div>
@@ -1030,56 +1237,70 @@ footer {
   </div>
 
 
-  <div class="hero-visual"></div>
+  <div class="hero-visual">
 
-</section>
+    <div class="visual-circle"></div>
 
+    <div class="hair-iron">
 
+      <div class="iron-top"></div>
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+      <div class="iron-bottom"></div>
 
-<section class="intro">
+      <div class="iron-joint"></div>
 
-  <div class="intro-inner">
+      <div class="iron-light"></div>
 
-    <div class="label">
-      OUR CONCEPT
     </div>
-
-    <h2>
-      髪を整えるだけじゃない。<br>
-      自分を好きになる時間。
-    </h2>
-
-    <p>
-
-      HOMICでは、
-      技術だけではなく、
-      カウンセリングから仕上げまで
-      一人ひとりに向き合うことを
-      大切にしています。
-
-    </p>
 
   </div>
 
 </section>
 
 
+<div class="gold-line"></div>
 
-<!-- =====================================================
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro">
+
+  <div class="section-label">
+    ABOUT HOMIC
+  </div>
+
+  <h2>
+    Beauty is<br>
+    personal.
+  </h2>
+
+  <p>
+
+    美容室は、髪を切る場所だけではありません。
+    自分らしさを見つけ、
+    新しい自分に出会う場所。
+    HOMICはそんな時間を大切にしています。
+
+  </p>
+
+</section>
+
+
+
+<!-- =========================================================
      CONCEPT
-===================================================== -->
+========================================================= -->
 
 <section
   class="section"
   id="concept"
 >
 
-  <div class="label">
-    CONCEPT
+  <div class="section-label">
+    01 / CONCEPT
   </div>
 
   <h2 class="section-title">
@@ -1089,36 +1310,36 @@ footer {
 
   <div class="concept">
 
-    <div class="concept-image"></div>
+    <div class="concept-visual"></div>
 
     <div class="concept-text">
 
       <h3>
-        似合うだけじゃない。<br>
-        「なりたい」を形に。
+        「似合う」を、<br>
+        もっと自由に。
       </h3>
 
       <p>
 
-        髪質、骨格、ライフスタイル。
-        それぞれ違うからこそ、
-        同じスタイルはありません。
+        流行だけを追いかけるのではなく、
+        お客様自身の個性を大切にする。
 
       </p>
 
       <p>
 
-        丁寧なカウンセリングを通して、
-        お客様自身も気づいていなかった
-        魅力を引き出します。
+        丁寧なカウンセリングで
+        なりたいイメージを共有し、
+        髪質や骨格まで考えた
+        オーダーメイドのスタイルをご提案。
 
       </p>
 
       <p>
 
-        サロンを出たあとも、
-        自宅で簡単に再現できる
-        スタイルをご提案します。
+        サロンを出た瞬間だけではなく、
+        次の日からも扱いやすい。
+        そんなヘアスタイルを目指します。
 
       </p>
 
@@ -1130,153 +1351,163 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      MENU
-===================================================== -->
+========================================================= -->
 
 <section
   class="section menu-section"
   id="menu"
 >
 
-  <div class="label">
-    MENU
+  <div class="menu-heading">
+
+    <div>
+
+      <div class="section-label">
+        02 / MENU
+      </div>
+
+      <h2 class="section-title">
+        メニュー
+      </h2>
+
+    </div>
+
+    <p class="menu-note">
+
+      ※価格はサンプルです。
+      実際の店舗では料金・内容を
+      自由に変更できます。
+
+    </p>
+
   </div>
 
-  <h2 class="section-title">
-    メニュー
-  </h2>
+
+  <div class="menu-list">
 
 
-  <div class="menu-grid">
+    <div class="menu-row">
 
-
-    <div class="menu-card">
-
-      <div class="menu-label">
-        CUT
+      <div class="menu-number">
+        01
       </div>
 
-      <h3>
-        Cut
-      </h3>
+      <div>
 
-      <div class="menu-item">
-        <strong>
-          カット
-        </strong>
+        <div class="menu-name">
+          CUT
+        </div>
 
-        <span>
-          ¥5,500
+        <span class="menu-detail">
+          カット・シャンプー・ブロー
         </span>
+
       </div>
 
-      <div class="menu-item">
-        <strong>
-          学生カット
-        </strong>
-
-        <span>
-          ¥4,000
-        </span>
-      </div>
-
-      <div class="menu-item">
-        <strong>
-          前髪カット
-        </strong>
-
-        <span>
-          ¥1,100
-        </span>
+      <div class="menu-price">
+        ¥5,500
       </div>
 
     </div>
 
 
+    <div class="menu-row">
 
-    <div class="menu-card">
-
-      <div class="menu-label">
-        COLOR
+      <div class="menu-number">
+        02
       </div>
 
-      <h3>
-        Color
-      </h3>
+      <div>
 
-      <div class="menu-item">
-        <strong>
-          カラー
-        </strong>
+        <div class="menu-name">
+          COLOR
+        </div>
 
-        <span>
-          ¥6,600〜
+        <span class="menu-detail">
+          カラー・シャンプー・ブロー
         </span>
+
       </div>
 
-      <div class="menu-item">
-        <strong>
-          リタッチ
-        </strong>
-
-        <span>
-          ¥5,500
-        </span>
-      </div>
-
-      <div class="menu-item">
-        <strong>
-          ハイライト
-        </strong>
-
-        <span>
-          ¥8,800〜
-        </span>
+      <div class="menu-price">
+        ¥6,600〜
       </div>
 
     </div>
 
 
+    <div class="menu-row">
 
-    <div class="menu-card">
-
-      <div class="menu-label">
-        TREATMENT
+      <div class="menu-number">
+        03
       </div>
 
-      <h3>
-        Care
-      </h3>
+      <div>
 
-      <div class="menu-item">
-        <strong>
-          トリートメント
-        </strong>
+        <div class="menu-name">
+          PERM
+        </div>
 
-        <span>
-          ¥3,300〜
+        <span class="menu-detail">
+          デザインパーマ
         </span>
+
       </div>
 
-      <div class="menu-item">
-        <strong>
-          ヘッドスパ
-        </strong>
-
-        <span>
-          ¥4,400
-        </span>
+      <div class="menu-price">
+        ¥8,800〜
       </div>
 
-      <div class="menu-item">
-        <strong>
-          プレミアムケア
-        </strong>
+    </div>
 
-        <span>
-          ¥6,600
+
+    <div class="menu-row">
+
+      <div class="menu-number">
+        04
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          TREATMENT
+        </div>
+
+        <span class="menu-detail">
+          プレミアムトリートメント
         </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥3,300〜
+      </div>
+
+    </div>
+
+
+    <div class="menu-row">
+
+      <div class="menu-number">
+        05
+      </div>
+
+      <div>
+
+        <div class="menu-name">
+          HEAD SPA
+        </div>
+
+        <span class="menu-detail">
+          癒しのヘッドスパ
+        </span>
+
+      </div>
+
+      <div class="menu-price">
+        ¥4,400
       </div>
 
     </div>
@@ -1287,21 +1518,21 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      STAFF
-===================================================== -->
+========================================================= -->
 
 <section
-  class="section"
+  class="section staff-section"
   id="staff"
 >
 
-  <div class="label">
-    STAFF
+  <div class="section-label">
+    03 / STYLIST
   </div>
 
   <h2 class="section-title">
-    スタッフ
+    スタイリスト
   </h2>
 
 
@@ -1311,7 +1542,7 @@ footer {
     <div class="staff-card">
 
       <div class="staff-photo">
-        HOMIC
+        HANA
       </div>
 
       <div class="staff-info">
@@ -1325,8 +1556,8 @@ footer {
         </h3>
 
         <p>
-          ナチュラルで扱いやすい
-          スタイルが得意です。
+          ナチュラルで透明感のある
+          スタイルが得意。
         </p>
 
       </div>
@@ -1334,11 +1565,10 @@ footer {
     </div>
 
 
-
     <div class="staff-card">
 
       <div class="staff-photo">
-        HOMIC
+        RINA
       </div>
 
       <div class="staff-info">
@@ -1352,8 +1582,8 @@ footer {
         </h3>
 
         <p>
-          カラーや透明感のある
-          スタイルを得意としています。
+          カラー・韓国風スタイルを
+          得意としています。
         </p>
 
       </div>
@@ -1361,11 +1591,10 @@ footer {
     </div>
 
 
-
     <div class="staff-card">
 
       <div class="staff-photo">
-        HOMIC
+        YUKI
       </div>
 
       <div class="staff-info">
@@ -1380,7 +1609,7 @@ footer {
 
         <p>
           メンズスタイルや
-          ショートヘアが得意です。
+          ショートヘアが得意。
         </p>
 
       </div>
@@ -1393,56 +1622,58 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      RESERVATION
-===================================================== -->
+========================================================= -->
 
 <section
-  class="reserve-banner"
+  class="reservation"
   id="reservation"
 >
 
-  <div class="label">
-    RESERVATION
+  <div class="reservation-inner">
+
+    <div class="section-label">
+      04 / RESERVATION
+    </div>
+
+    <h2>
+      新しい自分に、<br>
+      会いに行こう。
+    </h2>
+
+    <p>
+      ご予約・お問い合わせはこちらから。
+    </p>
+
+    <a
+      href="#"
+      class="button button-gold"
+      onclick="
+        alert('予約ページへ移動します。');
+        return false;
+      "
+    >
+      RESERVATION
+    </a>
+
   </div>
-
-  <h2>
-    あなたの「なりたい」を<br>
-    お聞かせください。
-  </h2>
-
-  <p>
-    ご予約・お問い合わせはこちらから。
-  </p>
-
-  <!-- ★ 実案件では予約URLに変更 -->
-
-  <a
-    href="#"
-    class="button reserve-white"
-    onclick="
-      alert('予約ページへ移動します。');
-      return false;
-    "
-  >
-    予約する
-  </a>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      ACCESS
-===================================================== -->
+========================================================= -->
 
 <section
   class="section access-section"
   id="access"
 >
 
-  <div class="label">
-    ACCESS
+  <div class="section-label">
+    05 / ACCESS
   </div>
 
   <h2 class="section-title">
@@ -1452,58 +1683,37 @@ footer {
 
   <div class="access">
 
-
     <div class="access-info">
 
       <h3>
-        HOMIC SALON
+        HOMIC BEAUTY SALON
       </h3>
 
       <p>
-
-        <strong>
-          ADDRESS
-        </strong><br>
-
+        <strong>ADDRESS</strong>
         愛媛県〇〇市〇〇町1-2-3
-
       </p>
 
       <p>
-
-        <strong>
-          OPEN
-        </strong><br>
-
+        <strong>OPEN</strong>
         10:00 - 19:00
-
       </p>
 
       <p>
-
-        <strong>
-          CLOSED
-        </strong><br>
-
+        <strong>CLOSED</strong>
         火曜日
-
       </p>
 
       <p>
-
-        <strong>
-          TEL
-        </strong><br>
-
+        <strong>TEL</strong>
         000-0000-0000
-
       </p>
 
     </div>
 
 
     <div class="map">
-      MAP
+      ACCESS MAP
     </div>
 
   </div>
@@ -1512,9 +1722,9 @@ footer {
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -1526,14 +1736,14 @@ footer {
         HOM<span>IC</span>
       </div>
 
-      <div class="footer-description">
-        あなたらしさを、もっと美しく。
+      <div class="footer-text">
+        BEAUTY / STYLE / PERSONALITY
       </div>
 
     </div>
 
     <div class="footer-copy">
-      © 2026 HOMIC. All Rights Reserved.
+      © 2026 HOMIC BEAUTY SALON
     </div>
 
   </div>
@@ -1544,18 +1754,23 @@ footer {
 
 <script>
 
-/* =====================================================
-   HOMIC SALON
-   Simple Scroll Animation
-===================================================== */
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealItems =
+document.querySelectorAll(
+  ".concept-text, .menu-row, .staff-card, .access-info"
+);
 
 const observer =
-  new IntersectionObserver(
-    (entries) => {
+new IntersectionObserver(
+  (entries) => {
 
-      entries.forEach((entry) => {
+    entries.forEach(
+      (entry) => {
 
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
 
           entry.target.style.opacity = "1";
 
@@ -1564,35 +1779,36 @@ const observer =
 
         }
 
-      });
+      }
+    );
 
-    },
-    {
-      threshold: 0.12
-    }
-  );
+  },
+  {
+    threshold:.12
+  }
+);
 
 
-document
-  .querySelectorAll(
-    ".concept-text, .menu-card, .staff-card, .access-info"
-  )
-  .forEach((element) => {
+revealItems.forEach(
+  (item) => {
 
-    element.style.opacity = "0";
+    item.style.opacity = "0";
 
-    element.style.transform =
+    item.style.transform =
       "translateY(25px)";
 
-    element.style.transition =
+    item.style.transition =
       "opacity .7s ease, transform .7s ease";
 
-    observer.observe(element);
+    observer.observe(item);
 
-  });
+  }
+);
 
 
-/* HEADER SHADOW */
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
 
 window.addEventListener(
   "scroll",
@@ -1601,15 +1817,15 @@ window.addEventListener(
     const header =
       document.querySelector(".header");
 
-    if (window.scrollY > 30) {
+    if(window.scrollY > 30){
 
-      header.style.boxShadow =
-        "0 8px 30px rgba(0,0,0,.08)";
+      header.style.background =
+        "rgba(10,9,8,.96)";
 
-    } else {
+    }else{
 
-      header.style.boxShadow =
-        "none";
+      header.style.background =
+        "rgba(17,16,15,.82)";
 
     }
 
